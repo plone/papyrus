@@ -12,7 +12,7 @@ PAPER         =
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/collective.usermanual
-I18NOPTS        = -p locale/pot -c source/collective.usermanual/conf.py -l fr -l it -l de
+I18NOPTS        = -p source/collective.usermanual/_locale/pot -c source/collective.usermanual/conf.py -l en -l it
 PKGS            = collective.usermanual_4.3.x collective.usermanual_4.4.x
 LANGS           = en it
 
@@ -57,7 +57,7 @@ html-%: $(SPHINX_DEPENDENCIES)
 #	@echo "Build finished. The HTML pages are in build/html."
 
 gettext:
-	$(SPHINXBUILD) -b gettext source/collective.usermanual source/collective.usermanual/_locale
+	$(SPHINXBUILD) -b gettext source/collective.usermanual source/collective.usermanual/_locale/pot
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
