@@ -14,7 +14,7 @@ PKGNAME       = collective.usermanual_robot-papyrus
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
-I18NOPTS        = -p source/$(PKGNAME)/_locale/pot -c source/$(PKGNAME)/conf.py -l en -l it
+I18NOPTS        = -p source/$(PKGNAME)/_locale/pot -c source/$(PKGNAME)/conf.py
 LANGS           = en it
 
 .PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
@@ -64,14 +64,19 @@ gettext:
 	@echo "Build finished. The HTML pages are in build/gettext."
 
 
-transifex-init:
-	$(SPHINXINTLBUILD) update-txconfig-resources $(I18NOPTS) --transifex-project-name plone-doc
-	$(SPHINXINTLBUILD) update $(I18NOPTS)
+transifex-init: $(foreach lang,$(LANGS),transifex-init-$(lang))
+transifex-init-%:
+	$(SPHINXINTLBUILD) update-txconfig-resources $(I18NOPTS) -l $* --transifex-project-name plone-doc
+	$(SPHINXINTLBUILD) update $(I18NOPTS) -l $*
 
-transifex-pull:
+transifex-push:
+	$(TX) push -s
+
+transifex-pull: $(foreach lang,$(LANGS),transifex-pull-$(lang))
+transifex-pull-%:
 	$(SPHINXBUILD) -b gettext source/$(PKGNAME) locale/pot
-#	$(TX) pull $(I18NOPTS)
-	$(SPHINXINTLBUILD) $(I18NOPTS) build
+	$(TX) pull -l $*
+	$(SPHINXINTLBUILD) $(I18NOPTS) -l $* build
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
 
