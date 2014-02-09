@@ -15,7 +15,7 @@ LANGS           = en it
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
-I18NOPTS        = -p source/$(PKGNAME)/_locale/pot -c source/$(PKGNAME)/conf.py
+I18NOPTS        = -p source/$(PKGNAME)/_locales/pot -c source/$(PKGNAME)/conf.py
 
 .PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
 
@@ -47,7 +47,7 @@ html-%: $(SPHINX_DEPENDENCIES)
 	@echo "Build finished. The HTML pages are in build/html."
 
 gettext:
-	$(SPHINXBUILD) -b gettext source/$(PKGNAME) source/$(PKGNAME)/_locale/pot
+	$(SPHINXBUILD) -b gettext source/$(PKGNAME) source/$(PKGNAME)/_locales/pot
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
@@ -61,7 +61,7 @@ transifex-push:
 
 transifex-pull: $(foreach lang,$(LANGS),transifex-pull-$(lang))
 transifex-pull-%:
-	$(SPHINXBUILD) -b gettext source/$(PKGNAME) locale/pot
+	$(SPHINXBUILD) -b gettext source/$(PKGNAME) locales/pot
 	$(TX) pull -l $*
 	$(SPHINXINTLBUILD) $(I18NOPTS) -l $* build
 	@echo
