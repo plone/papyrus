@@ -8,12 +8,13 @@ SPHINXINTLBUILD   = bin/sphinx-intl
 TX            = bin/tx
 PAPER         =
 
+PKGNAME       = collective.usermanual_robot-papyrus
+
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/collective.usermanual
-I18NOPTS        = -p source/collective.usermanual/_locale/pot -c source/collective.usermanual/conf.py -l en -l it
-PKGS            = collective.usermanual_4.3.x collective.usermanual_4.4.x
+ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
+I18NOPTS        = -p source/$(PKGNAME)/_locale/pot -c source/$(PKGNAME)/conf.py -l en -l it
 LANGS           = en it
 
 .PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
@@ -57,7 +58,7 @@ html-%: $(SPHINX_DEPENDENCIES)
 #	@echo "Build finished. The HTML pages are in build/html."
 
 gettext:
-	$(SPHINXBUILD) -b gettext source/collective.usermanual source/collective.usermanual/_locale/pot
+	$(SPHINXBUILD) -b gettext source/$(PKGNAME) source/$(PKGNAME)/_locale/pot
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
@@ -67,7 +68,7 @@ transifex-init:
 	$(SPHINXINTLBUILD) update $(I18NOPTS)
 
 transifex-pull:
-	$(SPHINXBUILD) -b gettext source/collective.usermanual locale/pot
+	$(SPHINXBUILD) -b gettext source/$(PKGNAME) locale/pot
 #	$(TX) pull $(I18NOPTS)
 	$(SPHINXINTLBUILD) $(I18NOPTS) build
 	@echo
