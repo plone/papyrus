@@ -48,7 +48,8 @@ clean:
 html: $(foreach lang,$(LANGS),html-$(lang))
 
 html-%: $(SPHINX_DEPENDENCIES)
-	$(SPHINXBUILD) -b html -D language=$* $(ALLSPHINXOPTS) build/html/$*
+	rm -rf source/$(PKGNAME)/_robot/*
+	LANGUAGE=$* $(SPHINXBUILD) -b html -D language=$* $(ALLSPHINXOPTS) build/html/$*
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
 
