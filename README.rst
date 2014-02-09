@@ -185,8 +185,8 @@ How to work on a new document
    * http://datakurre.pandala.org/2013/09/documentation-plausible-excuse-for.html
    * https://robotframework-selenium2screenshots.readthedocs.org/en/latest/
    * http://rtomac.github.io/robotframework-selenium2library/doc/Selenium2Library.html
-   * http://robotframework.googlecode.com/hg/doc/libraries/BuiltIn.html?r=2.8.1
-   * http://robotframework.googlecode.com/hg/doc/userguide/RobotFrameworkUserGuide.html?r=2.8.1
+   * http://robotframework.googlecode.com/hg/doc/libraries/BuiltIn.html?r=2.8.4
+   * http://robotframework.googlecode.com/hg/doc/userguide/RobotFrameworkUserGuide.html?r=2.8.4
 
 7. Try the results with sphinx:
 
@@ -304,7 +304,7 @@ Advanced topics
    ``${msg} =  Translate  msgidname default=Default translation"``
    and use that translated variable where localized string is required.
 
-   Update gettext-catalogs by running ``./i18n.sh``.
+   Update gettext-catalogs by running ``make babel``.
 
    Select build default language by setting environment variable
    ``LANGUAGE`` with your locale, e.g. ``LANGUAGE=fi make clean robot``.
