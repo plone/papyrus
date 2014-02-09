@@ -9,13 +9,13 @@ TX            = bin/tx
 PAPER         =
 
 PKGNAME       = collective.usermanual_robot-papyrus
+LANGS           = en it
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
 I18NOPTS        = -p source/$(PKGNAME)/_locale/pot -c source/$(PKGNAME)/conf.py
-LANGS           = en it
 
 .PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
 
@@ -38,13 +38,6 @@ help:
 clean:
 	-rm -rf build/*
 
-#html:
-#	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
-#	@echo
-#	@echo "Build finished. The HTML pages are in build/html."
-
-
-
 html: $(foreach lang,$(LANGS),html-$(lang))
 
 html-%: $(SPHINX_DEPENDENCIES)
@@ -53,16 +46,10 @@ html-%: $(SPHINX_DEPENDENCIES)
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
 
-#html-it:
-#	$(SPHINXBUILD) -b html -D language=it $(ALLSPHINXOPTS) build/html-it
-#	@echo
-#	@echo "Build finished. The HTML pages are in build/html."
-
 gettext:
 	$(SPHINXBUILD) -b gettext source/$(PKGNAME) source/$(PKGNAME)/_locale/pot
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
-
 
 transifex-init: $(foreach lang,$(LANGS),transifex-init-$(lang))
 transifex-init-%:
