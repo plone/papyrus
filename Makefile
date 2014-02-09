@@ -61,12 +61,14 @@ gettext:
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
+
 transifex-init:
 	$(SPHINXINTLBUILD) update-txconfig-resources $(I18NOPTS) --transifex-project-name plone-doc
+	$(SPHINXINTLBUILD) update $(I18NOPTS)
 
 transifex-pull:
 	$(SPHINXBUILD) -b gettext source/collective.usermanual locale/pot
-	$(TX) pull $(I18NOPTS)
+#	$(TX) pull $(I18NOPTS)
 	$(SPHINXINTLBUILD) $(I18NOPTS) build
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
