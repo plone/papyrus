@@ -7,7 +7,7 @@ install:
 - virtualenv buildout
 - mkdir -p buildout-cache/downloads
 - buildout/bin/python bootstrap.py -c travis.cfg
-- bin/buildout -N -t 3 -c travis.cfg buildout:checkout=collective.usermanual_robot-papyrus sources:collective.usermanual_robot-papyrus="git https://github.com/giacomos/papyrus egg=false branch=robot-papyrus"
+- bin/buildout -N -t 3 -c travis.cfg buildout:checkout=collective.usermanual_robot-papyrus sources:collective.usermanual_robot-papyrus="git https://github.com/collective/collective.usermanual branch=robot-papyrus egg=false"
 before_script:
 - gem install --version 0.8.9 faraday
 - gem install travis-artifacts
