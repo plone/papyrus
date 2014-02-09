@@ -9,6 +9,7 @@ TX            = bin/tx
 PAPER         =
 
 PKGNAME       = collective.usermanual_robot-papyrus
+TRANSIFEX_PROJECT_NAME = plone-doc
 LANGS           = en it
 
 # Internal variables.
@@ -53,7 +54,7 @@ gettext:
 
 transifex-init: $(foreach lang,$(LANGS),transifex-init-$(lang))
 transifex-init-%:
-	$(SPHINXINTLBUILD) update-txconfig-resources $(I18NOPTS) -l $* --transifex-project-name plone-doc
+	$(SPHINXINTLBUILD) update-txconfig-resources $(I18NOPTS) -l $* --transifex-project-name $(TRANSIFEX_PROJECT_NAME)
 	$(SPHINXINTLBUILD) update $(I18NOPTS) -l $*
 
 transifex-push:
@@ -61,7 +62,7 @@ transifex-push:
 
 transifex-pull: $(foreach lang,$(LANGS),transifex-pull-$(lang))
 transifex-pull-%:
-	$(SPHINXBUILD) -b gettext source/$(PKGNAME) locales/pot
+	$(SPHINXBUILD) -b gettext source/$(PKGNAME) source/$(PKGNAME)/_locales/pot
 	$(TX) pull -l $*
 	$(SPHINXINTLBUILD) $(I18NOPTS) -l $* build
 	@echo
