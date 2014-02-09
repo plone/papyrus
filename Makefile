@@ -18,7 +18,13 @@ PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
 I18NOPTS        = -p source/$(PKGNAME)/_locales/pot -c source/$(PKGNAME)/conf.py
 
-.PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
+# Robot-server variables
+CONFIGURE_PACKAGES = plone.app.iterate
+APPLY_PROFILES = plone.app.iterate:plone.app.iterate
+ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
+ROBOTSERVER_OPTS = -v
+
+.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -38,6 +44,7 @@ help:
 
 clean:
 	-rm -rf build/*
+	-rm -rf source/$(PKGNAME)/_robot/*.png
 
 html: $(foreach lang,$(LANGS),html-$(lang))
 
@@ -56,6 +63,20 @@ transifex-init: $(foreach lang,$(LANGS),transifex-init-$(lang))
 transifex-init-%:
 	$(SPHINXINTLBUILD) update-txconfig-resources $(I18NOPTS) -l $* --transifex-project-name $(TRANSIFEX_PROJECT_NAME)
 	$(SPHINXINTLBUILD) update $(I18NOPTS) -l $*
+
+robot-pot:
+
+serve:
+	CONFIGURE_PACKAGES=$(CONFIGURE_PACKAGES) APPLY_PROFILES=$(APPLY_PROFILES) bin/robot-server $(ROBOTSERVER_FIXTURE) $(ROBOTSERVER_OPTS)
+
+robot:
+	LANGUAGE=en bin/robot-sphinx -b html -Dlanguage=en $(ALLSPHINXOPTS) build/html/en
+	@echo
+	@echo "Build finished. The HTML pages are in build/html."
+
+babel:
+	bin/pybabel extract source/$(PKGNAME) -o source/$(PKGNAME)/_locales/pot/plone.pot
+	bin/i18ndude sync --pot source/$(PKGNAME)/_locales/pot/plone.pot source/$(PKGNAME)/_locales/*/LC_MESSAGES/plone.po
 
 transifex-push:
 	$(TX) push -s
