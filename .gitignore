@@ -54,16 +54,11 @@ bin
 picked.cfg
 src
 pip.log
-source/reference_manuals/external/*
+source/*
 
 buildout-cache/downloads/*
 buildout-cache/eggs/*
 
-source/_generated/*
 var
 
-# Don't commit symbolic links
-source/_static/contributors.css
-source/_static/contributors.js
-source/_static/transparency.min.js
 
