@@ -16,7 +16,7 @@ Quick start
 
    .. code:: bash
 
-      $ git clone git@github.com:giacomos/papyrus.git
+      $ git clone git@github.com:plone/papyrus.git
       $ cd papyrus
 
       $ python bootstrap.py
