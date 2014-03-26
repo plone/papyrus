@@ -24,7 +24,7 @@ APPLY_PROFILES = plone.app.iterate:plone.app.iterate
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 
-.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
+.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -41,6 +41,10 @@ help:
 	@echo "  changes   to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
+
+
+pull:
+	-git pull source/${PKGNAME}
 
 clean:
 	-rm -rf build/*
@@ -146,3 +150,4 @@ epub:
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) build/epub
 	@echo
 	@echo "Build finished. The e-Pub pages are in build/epub."
+
