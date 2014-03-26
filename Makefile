@@ -8,7 +8,7 @@ SPHINXINTLBUILD   = bin/sphinx-intl
 TX            = bin/tx
 PAPER         =
 
-PKGNAME       = collective.developermanual
+PKGNAME       = documentation
 TRANSIFEX_PROJECT_NAME = plone-doc
 LANGS           = en it
 
