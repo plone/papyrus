@@ -44,7 +44,8 @@ help:
 
 
 pull:
-	-git pull source/${PKGNAME}
+	-cd source/${PKGNAME}
+	-git pull
 
 clean:
 	-rm -rf build/*
