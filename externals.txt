@@ -1,0 +1,1 @@
+https://github.com/plone/plone.app.dexterity.git,source/documentation/external/plone.app.dexterity

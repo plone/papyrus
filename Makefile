@@ -46,11 +46,14 @@ help:
 pull:
 	-bin/develop update $(PKGNAME)
 
+externals:
+	-./get_external_doc.sh
+
 clean:
 	-rm -rf build/*
 	-rm -rf source/$(PKGNAME)/_robot/*.png
 
-html: $(foreach lang,$(LANGS),html-$(lang))
+html: externals $(foreach lang,$(LANGS),html-$(lang))
 
 html-%: $(SPHINX_DEPENDENCIES)
 	rm -rf source/$(PKGNAME)/_robot/*
