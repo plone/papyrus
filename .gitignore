@@ -55,6 +55,9 @@ picked.cfg
 src
 pip.log
 source/*
+!source/robot.rst
+!source/robot-standalone.rst
+!source/robot-server.rst
 
 buildout-cache/downloads/*
 buildout-cache/eggs/*
