@@ -53,7 +53,7 @@ clean:
 	-rm -rf build/*
 	-rm -rf source/$(PKGNAME)/_robot/*.png
 
-html: externals $(foreach lang,$(LANGS),html-$(lang))
+html: $(foreach lang,$(LANGS),html-$(lang))
 
 html-%: $(SPHINX_DEPENDENCIES)
 	rm -rf source/$(PKGNAME)/_robot/*
