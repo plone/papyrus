@@ -15,3 +15,4 @@ do
         cd -
     fi
 done < externals.txt
+find -L . -type l -delete
