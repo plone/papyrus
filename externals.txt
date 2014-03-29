@@ -1,1 +1,4 @@
 https://github.com/plone/plone.app.dexterity.git,source/documentation/external/plone.app.dexterity
+https://github.com/plone/plone.api.git,source/documentation/external/plone.api
+https://github.com/plone/plone.app.robotframework.git,source/documentation/external/plone.app.robotframework
+https://github.com/plone/plone.app.multilingual.git,source/documentation/external/plone.app.mulitilingual
