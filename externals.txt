@@ -2,6 +2,8 @@ https://github.com/plone/plone.app.dexterity.git,source/documentation/external/p
 https://github.com/plone/plone.api.git,source/documentation/external/plone.api
 https://github.com/plone/plone.app.robotframework.git,source/documentation/external/plone.app.robotframework
 https://github.com/plone/plone.app.multilingual.git,source/documentation/external/plone.app.multilingual
-https://github.com/plone/diazo.git,source/documentation/external/plone.diazo
+https://github.com/plone/diazo.git,source/documentation/external/diazo
 https://github.com/collective/tutorial.todoapp.git,source/documentation/external/tutorial.todoapp
 https://github.com/plone/Products.TinyMCE.git,source/documentation/external/Products.TinyMCE
+https://github.com/plone/plone.app.contentlisting.git,source/documentation/external/plone.app.contentlisting
+https://github.com/plone/plone.app.contenttypes.git,source/documentation/external/plone.app.contenttypes
