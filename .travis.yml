@@ -18,8 +18,8 @@ after_script:
 env:
   global:
   - ARTIFACTS_S3_BUCKET=plone-papyrus
-  - secure: ChSaA0uAtrvf7OnKApr/SyWxVoHhO+yC9tT97uEscsGpRjLNYE2NXpUg8fuLjFVX+jfwfOy4UfrruzEzctnlgGuo0bNF4PBoR7fS2DSzeiYlMkFLkp0fsGvJtCOBy2ENX52sJj9KMONjtczMeBRPnMKWiPcZBBYRd9HUsb7fhv4=
-  - secure: Y43rO/1QR1AKsZYVu0Vz/O42m2tekcWLn/BUZL2KP4WX83QDliaPwkR4WEVEGqzEDfGpcsXvTRNhc9it0YWAld7GJj/NjAtBGIBdy+RXOG+Y51O7aplfu8ozhS5xpkDyg/GP5lib5rA5XrlZuLJ0gPBrJKzRICdI//7Qbus+gg8=
+  - secure: M0lSlWGVcvYmvw1RRy5yewlXsp2WK6YNy4I0TEoIUewAmw3WJRM6c98BA/ZtNEwTyiN+hhQNqWrJHbS6GlL+77HK2kXijSgcdM9EWGaEh4mDzKvFsfa41mGobUNHEjHWZRBFKNG0sWRNU1ZmDiSCMgUqsT44ID2Ub6i/Nyp9Qok=
+  - secure: gLj4f0k4DvF6c4RFL3VpQPMuikCVYlNJ+PI4pgP4QhZOFMSXz1OE/YqATql46dIApcdPqUW+Hoi++x+KGLg56V2gcVe9Ea5Z7H4E6RxPMTqO5EfgWqXLXZc12FjZolcAgPJbdLqxFYnL4hUwu0PoLgc33MFKlKbn7incFptptD0=
 notifications:
   irc:
     channels:
