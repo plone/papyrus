@@ -8,3 +8,4 @@ https://github.com/plone/Products.TinyMCE.git,source/documentation/external/Prod
 https://github.com/plone/plone.app.contentlisting.git,source/documentation/external/plone.app.contentlisting
 https://github.com/plone/plone.app.contenttypes.git,source/documentation/external/plone.app.contenttypes
 https://github.com/plone/plone.app.theming.git,source/documentation/external/plone.app.theming
+https://github.com/plone/plone.app.testing.git,source/documentation/external/plone.app.testing
