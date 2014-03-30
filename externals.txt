@@ -7,3 +7,4 @@ https://github.com/collective/tutorial.todoapp.git,source/documentation/external
 https://github.com/plone/Products.TinyMCE.git,source/documentation/external/Products.TinyMCE
 https://github.com/plone/plone.app.contentlisting.git,source/documentation/external/plone.app.contentlisting
 https://github.com/plone/plone.app.contenttypes.git,source/documentation/external/plone.app.contenttypes
+https://github.com/plone/plone.app.theming.git,source/documentation/external/plone.app.theming
