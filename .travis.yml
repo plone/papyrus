@@ -8,22 +8,11 @@ install:
 - mkdir -p buildout-cache/downloads
 - buildout/bin/python bootstrap.py -c travis.cfg
 - bin/buildout -N -t 3 -c travis.cfg
-before_script:
-- gem install --version 0.8.9 faraday
-- gem install travis-artifacts
 script:
 - make html
-after_script:
-- travis-artifacts upload --path build/html
-env:
-  global:
-  - ARTIFACTS_S3_BUCKET=plone-papyrus
-  - secure: M0lSlWGVcvYmvw1RRy5yewlXsp2WK6YNy4I0TEoIUewAmw3WJRM6c98BA/ZtNEwTyiN+hhQNqWrJHbS6GlL+77HK2kXijSgcdM9EWGaEh4mDzKvFsfa41mGobUNHEjHWZRBFKNG0sWRNU1ZmDiSCMgUqsT44ID2Ub6i/Nyp9Qok=
-  - secure: gLj4f0k4DvF6c4RFL3VpQPMuikCVYlNJ+PI4pgP4QhZOFMSXz1OE/YqATql46dIApcdPqUW+Hoi++x+KGLg56V2gcVe9Ea5Z7H4E6RxPMTqO5EfgWqXLXZc12FjZolcAgPJbdLqxFYnL4hUwu0PoLgc33MFKlKbn7incFptptD0=
 notifications:
   irc:
     channels:
     - irc.freenode.org#plone-docs
     template:
     - ! '%{repository}#%{build_number} (%{branch} | %{commit} | %{author}): %{message}'
-    - ! 'Sphinx: http://plone-papyrus.s3-website-us-east-1.amazonaws.com/artifacts/%{build_number}/%{build_number}.1/en/'
