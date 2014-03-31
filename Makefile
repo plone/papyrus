@@ -71,7 +71,7 @@ transifex-init-%:
 	$(SPHINXINTLBUILD) update-txconfig-resources $(I18NOPTS) -l $* --transifex-project-name $(TRANSIFEX_PROJECT_NAME)
 	$(SPHINXINTLBUILD) update $(I18NOPTS) -l $*
 
-robot-pot:
+robot-pot: babel
 
 serve:
 	CONFIGURE_PACKAGES=$(CONFIGURE_PACKAGES) APPLY_PROFILES=$(APPLY_PROFILES) bin/robot-server $(ROBOTSERVER_FIXTURE) $(ROBOTSERVER_OPTS)
