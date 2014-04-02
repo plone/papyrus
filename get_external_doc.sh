@@ -15,4 +15,4 @@ do
         cd -
     fi
 done < externals.txt
-find -L . -type l -delete
+find . -type l -exec test ! -e {} \; -delete
