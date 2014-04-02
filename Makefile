@@ -127,7 +127,7 @@ qthelp:
 	@echo "# assistant -collectionFile build/qthelp/PloneDeveloperManual.qhc"
 
 latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) build/latex
+	$(SPHINXBUILD) -w log/sphinx-latex.log -b latex $(ALLSPHINXOPTS)  build/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in build/latex."
 	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
