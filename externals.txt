@@ -9,3 +9,4 @@ https://github.com/plone/plone.app.contentlisting.git,source/documentation/exter
 https://github.com/plone/plone.app.contenttypes.git,source/documentation/external/plone.app.contenttypes
 https://github.com/plone/plone.app.theming.git,source/documentation/external/plone.app.theming
 https://github.com/plone/plone.app.testing.git,source/documentation/external/plone.app.testing
+https://github.com/collective/collective.transmogrifier.git,source/documentation/external/collective.transmogrifier
