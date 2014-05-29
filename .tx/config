@@ -1,0 +1,69 @@
+[main]
+host = https://www.transifex.com
+type = PO
+
+[plone-doc.appendices]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/appendices.po
+source_file = source/documentation/_locales/appendices.pot
+source_lang = en
+
+[plone-doc.index]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/index.po
+source_file = source/documentation/_locales/index.pot
+source_lang = en
+
+[plone-doc.license]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/license.po
+source_file = source/documentation/_locales/license.pot
+source_lang = en
+
+[plone-doc.adapt-and-extend]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/adapt-and-extend.po
+source_file = source/documentation/_locales/adapt-and-extend.pot
+source_lang = en
+
+[plone-doc.working-with-content]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/working-with-content.po
+source_file = source/documentation/_locales/working-with-content.pot
+source_lang = en
+
+[plone-doc.about]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/about.po
+source_file = source/documentation/_locales/about.pot
+source_lang = en
+
+[plone-doc.askforhelp]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/askforhelp.po
+source_file = source/documentation/_locales/askforhelp.pot
+source_lang = en
+
+[plone-doc.old-reference-manuals]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/old-reference-manuals.po
+source_file = source/documentation/_locales/old-reference-manuals.pot
+source_lang = en
+
+[plone-doc.intro]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/intro.po
+source_file = source/documentation/_locales/intro.pot
+source_lang = en
+
+[plone-doc.sitemap]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/sitemap.po
+source_file = source/documentation/_locales/sitemap.pot
+source_lang = en
+
+[plone-doc.develop]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/develop.po
+source_file = source/documentation/_locales/develop.pot
+source_lang = en
+
+[plone-doc.external]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/external.po
+source_file = source/documentation/_locales/external.pot
+source_lang = en
+
+[plone-doc.manage]
+file_filter = source/documentation/_locales/<lang>/LC_MESSAGES/manage.po
+source_file = source/documentation/_locales/manage.pot
+source_lang = en
+
