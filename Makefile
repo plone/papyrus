@@ -10,13 +10,13 @@ PAPER         =
 
 PKGNAME       = documentation
 TRANSIFEX_PROJECT_NAME = plone-doc
-LANGS           = en # it
+LANGS           = en it
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
-I18NOPTS        = -p source/$(PKGNAME)/_locales/pot -c source/$(PKGNAME)/conf.py
+I18NOPTS        = --pot-dir source/$(PKGNAME)/_locales -c source/$(PKGNAME)/conf.py
 
 # Robot-server variables
 CONFIGURE_PACKAGES = plone.app.iterate
@@ -33,7 +33,8 @@ help:
 	@echo "  pickle    to make pickle files"
 	@echo "  gettext   to make i18n messages files"
 	@echo "  transifex-init to register new resources in transifex"
-	@echo "  transifex-pull to pull resources from Transifex"
+	@echo "  transifex-push to push gettext strings to Transifex"
+	@echo "  transifex-pull to pull gettext strings from Transifex"
 	@echo "  json      to make JSON files"
 	@echo "  htmlhelp  to make HTML files and a HTML help project"
 	@echo "  qthelp    to make HTML files and a qthelp project"
@@ -62,7 +63,7 @@ html-%: $(SPHINX_DEPENDENCIES)
 	@echo "Build finished. The HTML pages are in build/html."
 
 gettext:
-	$(SPHINXBUILD) -b gettext source/$(PKGNAME) source/$(PKGNAME)/_locales/pot
+	$(SPHINXBUILD) -b gettext -D copyright="The Plone Foundation" source/$(PKGNAME) source/$(PKGNAME)/_locales
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
@@ -90,7 +91,6 @@ transifex-push:
 
 transifex-pull: $(foreach lang,$(LANGS),transifex-pull-$(lang))
 transifex-pull-%:
-	$(SPHINXBUILD) -b gettext source/$(PKGNAME) source/$(PKGNAME)/_locales/pot
 	$(TX) pull -l $*
 	$(SPHINXINTLBUILD) $(I18NOPTS) -l $* build
 	@echo
