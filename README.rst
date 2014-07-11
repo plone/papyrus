@@ -12,7 +12,7 @@ Plone with fully automated screenshots.
 Quick start
 -----------
 
-0. Clone and bootstrap
+1. Clone and bootstrap
 
    .. code:: bash
 
@@ -22,13 +22,19 @@ Quick start
       $ python bootstrap.py
       $ bin/buildout
 
-1. Start server
+2. Retrieve external documentation
+
+  .. code:: bash
+
+     $ get_external_doc.sh
+
+3. Start server
 
    .. code:: bash
 
       $ make serve
 
-3. Build docs
+4. Build docs
 
    .. code:: bash
 
@@ -41,7 +47,12 @@ Introduction
 ------------
 
 This is a sphinxified version of manually (WYSIWYG) authored Plone User Manual
-from plone.org (sphinxification done by Giacomo Spettoli). Let's finish the
+from plone.org (sphinxification done by Giacomo Spettoli).
+
+Robots
+======
+
+Let's finish the
 work by refactoring screenshots to be generated with our robot testing tools.
 
 Writing robot-scripts for screenshots is a daunting task at first,
