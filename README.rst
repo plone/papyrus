@@ -33,6 +33,7 @@ Installation
 
 - virtualenv with python2.7
 - enchant
+- a recent version of `Firefox <https://www.mozilla.org/en-US/firefox/desktop/>`_
 
 Quick start
 -----------
