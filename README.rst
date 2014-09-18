@@ -23,7 +23,7 @@ Documentation
 
 Full documentation for end users can be found in the `docs <https://github.com/plone/papyrus/tree/master/docs>`_ folder.
 
-`Working with fully automated screenshots <https://github.com/plone/papyrus/tree/master/docs/robots.rst>`_
+`Working with Robots <https://github.com/plone/papyrus/tree/master/docs/robots.rst>`_
 
 
 Installation
