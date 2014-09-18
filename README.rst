@@ -48,7 +48,8 @@ To install Papyrus on Ubuntu 14.04 you will need:
     libxslt-dev
     libz-dev
     firefox
-
+    exlive-latex-extra
+    texlive-latex-recommended
 
 Quick start
 -----------
