@@ -31,8 +31,9 @@ Installation
 
 **Requirements:**
 
-Since Papyrus uses robot-framework for fully automated screenshots, the buildout will install Plone.
-To install Papyrus on Ubuntu 14.04 you will need:
+Since Papyrus uses robot-framework for fully automated screenshots, the buildout will install Plone. 
+Also, to generate PDF, you'll need latex, which is a large package.
+To install Papyrus with all features and possibilites on Ubuntu 14.04 you will need:
 
 .. code-block:: bash
 
