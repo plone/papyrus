@@ -31,9 +31,24 @@ Installation
 
 **Requirements:**
 
-- virtualenv with python2.7
-- enchant
-- a recent version of `Firefox <https://www.mozilla.org/en-US/firefox/desktop/>`_
+Since Papyrus uses robot-framework for fully automated screenshots, the buildout will install Plone.
+To install Papyrus on Ubuntu 14.04 you will need:
+
+.. code-block:: bash
+
+    python2.7
+    python2.7-dev
+    git
+    build-essential
+    enchant
+    python-virtualenv
+    python-dev
+    libjpeg-dev
+    libxml2-dev
+    libxslt-dev
+    libz-dev
+    firefox
+
 
 Quick start
 -----------
