@@ -147,7 +147,7 @@ epub:
 	@echo
 	@echo "Build finished. The e-Pub pages are in build/epub."
 
-spelling:
+spellcheck:
 	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D language=$* $(ALLSPHINXOPTS) build/spell/$*
 	@echo
 	@echo "Spellcheck is finished; look for any errors in the above output " \
