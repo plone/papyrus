@@ -10,8 +10,8 @@ PAPER         =
 
 PKGNAME       = documentation
 TRANSIFEX_PROJECT_NAME = plone-doc
-LANGS           = en it
-
+#LANGS           = en it
+LANGS		= en
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
