@@ -24,7 +24,7 @@ APPLY_PROFILES = plone.app.iterate:plone.app.iterate
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 
-.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull
+.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -154,3 +154,14 @@ epub:
 	@echo
 	@echo "Build finished. The e-Pub pages are in build/epub."
 
+spellcheck:
+	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D language=$* $(ALLSPHINXOPTS) build/spell/$*
+	@echo
+	@echo "Spellcheck is finished; look for any errors in the above output " \
+              " or in build/spell/output.txt."
+test:
+	linkcheck
+	spelling
+	@echo
+	@echo " link- and spellcheck is finished, for results please " \
+	      " check build/linkcheck/output.txt and build/spell/output.txt"
