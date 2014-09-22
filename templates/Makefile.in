@@ -41,6 +41,7 @@ help:
 	@echo "  changes   to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
+	@echo "  spellcheck   to run the enchant spellchecker on all sourcefiles"
 
 clean:
 	-rm -rf build/*
@@ -151,5 +152,5 @@ spellcheck:
 	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D language=$* $(ALLSPHINXOPTS) build/spell/$*
 	@echo
 	@echo "Spellcheck is finished; look for any errors in the above output " \
-		  " or in build/spell/output.txt."
+	       " or in build/spell/output.txt."
 
