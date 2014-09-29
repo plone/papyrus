@@ -7,4 +7,34 @@ A: Dash is an API Documentation Browser and Code Snippet Manager. Dash stores sn
 
 Use http://pypi.python.org/pypi/doc2dash to generate docsets from Python, Sphinx or PyDoctor-generated documentation.
 
+Setup
+=====
 
+Innstall doc2dash, since there are some 'versin dependecies problems' yu can install doc2dash via buildout, that is the reason why we use pip
+
+.. code-block::
+
+    pip install --user doc2dash
+
+Building the docset::
+
+.. code-block::
+
+    doc2dash -n Plone build/html/en
+
+Archive your docset using:
+
+
+.. note::
+
+Part of copying the info.plist file is still missing
+
+.. code-block::
+
+    tar --exclude='.DS_Store' -cvzf Plone.tgz Plone.docset
+
+Follow furhter this instructions: https://github.com/Kapeli/Dash-User-Contributions#contribute-a-new-docset
+
+.. note::
+
+Write a script to automate all this
