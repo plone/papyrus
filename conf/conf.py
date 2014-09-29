@@ -50,9 +50,9 @@ sphinxcontrib_robotframework_variables = {
 todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['source/documentation/_templates']
+templates_path = ['../source/documentation/_templates']
 
-locale_dirs = ["source/documentation/_locales"]
+locale_dirs = ["../source/documentation/_locales"]
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -234,7 +234,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = "logo_2x.png"
+latex_logo = "../source/documentation/_static/logo_2x.png"
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
