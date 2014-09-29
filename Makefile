@@ -43,7 +43,7 @@ help:
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 	@echo "  spellcheck   to run the enchant spellchecker on all sourcefiles"
-		
+	@echo "  debug-eng to run a 'quick' html build without robot-framework"		
 		
 pull:
 	-bin/develop update $(PKGNAME)
