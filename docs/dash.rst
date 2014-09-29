@@ -10,7 +10,7 @@ Use http://pypi.python.org/pypi/doc2dash to generate docsets from Python, Sphinx
 Setup
 =====
 
-Innstall doc2dash, since there are some 'versin dependecies problems' yu can install doc2dash via buildout, that is the reason why we use pip
+Install doc2dash, since there are some 'version dependecies problems' when installing doc2dash via buildout for now, that is the reason why we use pip
 
 .. code-block::
 
@@ -33,7 +33,7 @@ Part of copying the info.plist file is still missing
 
     tar --exclude='.DS_Store' -cvzf Plone.tgz Plone.docset
 
-Follow furhter this instructions: https://github.com/Kapeli/Dash-User-Contributions#contribute-a-new-docset
+Follow further this instructions: https://github.com/Kapeli/Dash-User-Contributions#contribute-a-new-docset
 
 .. note::
 
