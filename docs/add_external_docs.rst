@@ -20,6 +20,8 @@ To accomplish pulling in those docs, and **only** those docs, we use two steps:
 
 https://github.com/plone/papyrus/blob/master/externals.txt
 
-First, you edit this file, in the fist part the github repository and in the second part the path to which is should get sourced, this is usually something like source/documentation/external/
+First, you edit this file, in the fist part the github repository and in the second part the path to which it should get sourced, this is usually something like source/documentation/external/
+Note that this doesn't affect the actual **placement** of those docs into the tree; you'll have to refer to it at the wanted location, usually with a TOC command. 
+See the mindmap for ideas, and consult with the team first when in doubt where this add-on documentation should go.
 
 Second, when you later build the documentation you have to execute the command 'make externals'  which will fetch the files and configure spares for you.
