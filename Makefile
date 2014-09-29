@@ -79,7 +79,7 @@ serve:
 	CONFIGURE_PACKAGES=$(CONFIGURE_PACKAGES) APPLY_PROFILES=$(APPLY_PROFILES) bin/robot-server $(ROBOTSERVER_FIXTURE) $(ROBOTSERVER_OPTS)
 
 robot:
-	LANGUAGE=en bin/robot-sphinx -b html -Dlanguage=en $(ALLSPHINXOPTS) build/html/en
+	LANGUAGE=en bin/robot-sphinx -b html -D language=en $(ALLSPHINXOPTS) build/html/en
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
 
@@ -160,6 +160,12 @@ spellcheck:
 	@echo
 	@echo "Spellcheck is finished; look for any errors in the above output " \
               " or in build/spell/output.txt."
+
+debug-eng:
+	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) build/html/en
+	@echo
+	@echo " Running debug build "
+
 test:
 	linkcheck
 	spelling
