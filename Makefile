@@ -43,7 +43,7 @@ help:
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 	@echo "  spellcheck   to run the enchant spellchecker on all sourcefiles"
-	@echo "  debug-eng to run a 'quick' html build without robot-framework"
+	@echo "  debug to run a 'quick' html build without robot-framework"
 
 pull:
 	-bin/develop update $(PKGNAME)
@@ -161,7 +161,7 @@ spellcheck:
 	@echo "Spellcheck is finished; look for any errors in the above output " \
               " or in build/spell/output.txt."
 
-debug-eng:
+debug:
 	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) build/html/en
 	@echo
 	@echo " Running debug build "
