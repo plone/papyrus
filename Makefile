@@ -15,8 +15,8 @@ LANGS		= en
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
-I18NOPTS        = --pot-dir source/$(PKGNAME)/_locales -c source/$(PKGNAME)/conf.py
+ALLSPHINXOPTS   = -d build/doctrees -c conf $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
+I18NOPTS        = --pot-dir source/$(PKGNAME)/_locales -c conf
 
 # Robot-server variables
 CONFIGURE_PACKAGES = plone.app.iterate
@@ -43,8 +43,8 @@ help:
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 	@echo "  spellcheck   to run the enchant spellchecker on all sourcefiles"
-	@echo "  debug-eng to run a 'quick' html build without robot-framework"		
-		
+	@echo "  debug-eng to run a 'quick' html build without robot-framework"
+
 pull:
 	-bin/develop update $(PKGNAME)
 
@@ -64,7 +64,7 @@ html-%: $(SPHINX_DEPENDENCIES)
 	@echo "Build finished. The HTML pages are in build/html."
 
 gettext:
-	$(SPHINXBUILD) -b gettext -D copyright="The Plone Foundation" source/$(PKGNAME) source/$(PKGNAME)/_locales
+	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" source/$(PKGNAME) source/$(PKGNAME)/_locales
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
