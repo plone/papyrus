@@ -78,11 +78,11 @@ trademark_name = "Plone"
 # The short X.Y version.
 version = [
 #    '5.0',
-    '4.3',
-#    '3.3',
+#    '4.3',
+    '3.3',
     ]
 # The full version, including alpha/beta/rc tags.
-release = '4.3'
+release = '3.3'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -133,7 +133,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
-html_theme = 'plone_org_4'
+html_theme = 'plone_classic'
 import sphinx.themes.plone
 html_theme_path = sphinx.themes.plone.get_html_theme_path()
 
