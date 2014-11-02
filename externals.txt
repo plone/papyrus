@@ -1,6 +1,5 @@
 https://github.com/plone/plone.app.robotframework.git,source/documentation/external/plone.app.robotframework
 https://github.com/plone/diazo.git,source/documentation/external/diazo
-https://github.com/collective/tutorial.todoapp.git,source/documentation/external/tutorial.todoapp
 https://github.com/plone/Products.TinyMCE.git,source/documentation/external/Products.TinyMCE
 https://github.com/collective/collective.transmogrifier.git,source/documentation/external/collective.transmogrifier
 https://github.com/plone/plone.app.caching.git,source/documentation/external/plone.app.caching
