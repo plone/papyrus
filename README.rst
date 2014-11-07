@@ -69,7 +69,7 @@ Quick start
 
   .. code:: bash
 
-     $ get_external_doc.sh
+     $ ./get_external_doc.sh
 
 3. Start server
 
