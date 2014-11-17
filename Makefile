@@ -166,9 +166,7 @@ debug:
 	@echo
 	@echo " Running debug build "
 
-test:
-	linkcheck
-	spelling
+test:	linkcheck spelling
 	@echo
 	@echo " link- and spellcheck is finished, for results please " \
 	      " check build/linkcheck/output.txt and build/spell/output.txt"
