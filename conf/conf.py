@@ -87,7 +87,10 @@ release = '4.3'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = ['README.rst', '_*.rst',
-                    'external/plone.api/docs/CHANGES.rst']
+                    'external/plone.api/docs/CHANGES.rst',
+                    'develop/plone-coredev/es/*',
+                    'develop/plone-coredev/pt_BR',
+                    'external/Products.TinyMCE/docs/source/contributors.rst']
 
 # Announce that we have a opensearch plugin
 html_use_opensearch = 'http://docs.plone.org'
