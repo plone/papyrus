@@ -68,7 +68,9 @@ project = u'Plone Documentation'
 copyright = u'''The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
         Plone and the Plone<sup>®</sup> logo are registered trademarks of the Plone Foundation, registered in the United States and other countries.
         For guidelines on the permitted uses of the Plone trademarks, see https://plone.org/foundation/logo
-        All other trademarks are owned by their respective owners.'''
+        All other trademarks are owned by their respective owners.
+        Hosted by Rackspace.'''
+
 trademark_name = "Plone"
 
 # The version info for the project you're documenting, acts as replacement for
