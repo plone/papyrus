@@ -166,8 +166,8 @@ html_theme_options = {
     'external_topbar': True,
     'version_switcher': True,
     'always_show_version_switcher': True,
-    'always_show_language_switcher': True,
-    'show_version_warning': True,
+    'always_show_language_switcher': False,
+#    'show_version_warning': True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
