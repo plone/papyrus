@@ -167,7 +167,7 @@ html_theme_options = {
     'version_switcher': True,
     'always_show_version_switcher': True,
     'always_show_language_switcher': False,
-#    'show_version_warning': True,
+    'show_version_warning': False,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
