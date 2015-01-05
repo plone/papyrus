@@ -1,7 +1,7 @@
 Generating Dash Docsets
 =======================
 
-Q: What is Dash http://kapeli.com/dash ? 
+Q: What is Dash http://kapeli.com/dash ?
 
 A: Dash is an API Documentation Browser and Code Snippet Manager. Dash stores snippets of code and instantly searches offline documentation sets for 150+ APIs.
 
@@ -16,7 +16,7 @@ Install doc2dash, since there are some 'version dependecies problems' when insta
 
     pip install --user doc2dash
 
-Building the docset::
+Building the docset
 
 .. code-block::
 
@@ -24,17 +24,14 @@ Building the docset::
 
 Archive your docset using:
 
-
-.. note::
-
-Part of copying the info.plist file is still missing
-
 .. code-block::
 
     tar --exclude='.DS_Store' -cvzf Plone.tgz Plone.docset
 
 Follow further this instructions: https://github.com/Kapeli/Dash-User-Contributions#contribute-a-new-docset
 
-.. note::
+Missing
+-------
 
-Write a script to automate all this
+- Part of copying the info.plist file
+- Write a script to automate all this
