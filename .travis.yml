@@ -6,7 +6,7 @@ before_install:
 install:
 - virtualenv buildout
 - mkdir -p buildout-cache/downloads
-- buildout/bin/python bootstrap.py -c travis.cfg
+- buildout/bin/python bootstrap-buildout.py -c travis.cfg
 - bin/buildout -N -t 3 -c travis.cfg
 script:
 - make html
