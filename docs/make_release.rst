@@ -14,7 +14,7 @@ Steps
     cd plone4
     make html
 
-- build dash docset [docs are still missing]
+- build dash docset [docs are still in progress]
 - build zeal docset [docs are still missing]
 - upload created static html to vagrant test box
 - upload dash and zeal docsets to vagrant test box
@@ -26,3 +26,10 @@ Steps
 - sync new docsets and html to docs.plone.org
 - announce new version via twitter account and on community
 
+Question/Todo
+-------------
+
+- sync files via vagrant share to vagrant test box, with this we do not have to copy, this saves us
+  some time.
+- use only selfhosted dash and zeal
+- changelog yes/no if so where to put
