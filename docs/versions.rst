@@ -33,4 +33,4 @@ Definition of the branch of the plone version is done under the *source section*
 	documentation = git https://github.com/plone/documentation.git egg=false branch=3.3
 	...
 
-This tells buildout to checkout the branch 3.3 as is Plone 3.3
+This tells buildout to checkout the branch 3.3, which is Plone 3.3
