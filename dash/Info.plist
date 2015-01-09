@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>Plone</string>
+	<string>Plone 4</string>
 	<key>CFBundleName</key>
-	<string>Plone</string>
+	<string>Plone 4</string>
 	<key>DashDocSetFamily</key>
 	<string>python</string>
 	<key>DashDocSetKeyword</key>
