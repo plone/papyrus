@@ -16,13 +16,13 @@ Install doc2dash, since there are some 'version dependecies problems' when insta
 
     pip install --user doc2dash
 
-Building the docset, depending on the version, like for Plone 3 or Plone 4
+Building the docset, depending on the version, like for Plone 3 or Plone 4:
 
 .. code-block::
 
-    doc2dash -n Plone4 build/html/en
+    doc2dash -n Plone4 --icon dash/icon.png build/html/en
 
-Fixing the Info.plist file
+Fixing the Info.plist file:
 
 .. code-block::
 
@@ -30,19 +30,13 @@ Fixing the Info.plist file
     rm Info.plist
     wget https://raw.githubusercontent.com/plone/papyrus/master/dash/Info.plist
 
-Adding icons
+Adding icon:
 
 .. code-block::
 
-    cd Pone4.docset/Contents
-    wget https://raw.githubusercontent.com/plone/papyrus/master/dash/icon.png
     cd Pone4.docset/Contents/Resources/Documents
     wget https://raw.githubusercontent.com/plone/papyrus/master/dash/icon.png
 
-
-.. note::
-
-    Check the manual from doc2dash, I guess we can do this with doc2dash
 
 Archive your docset using:
 
