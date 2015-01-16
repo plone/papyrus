@@ -26,7 +26,7 @@ Fixing the Info.plist file:
 
 .. code-block::
 
-    cd Pone4.docset/Contents
+    cd Plone4.docset/Contents
     rm Info.plist
     wget https://raw.githubusercontent.com/plone/papyrus/master/dash/Info.plist
 
