@@ -52,37 +52,6 @@ To install Papyrus with all features and possibilites on Ubuntu 14.04 you will n
     texlive-latex-extra
     texlive-latex-recommended
 
-Quick start
------------
-
-1. Clone and bootstrap
-
-   .. code:: bash
-
-      $ git clone git@github.com:plone/papyrus.git
-      $ cd papyrus
-
-      $ python bootstrap-buildout.py
-      $ bin/buildout
-
-2. Retrieve external documentation
-
-  .. code:: bash
-
-     $ make externals
-
-3. Start server
-
-   .. code:: bash
-
-      $ make serve
-
-4. Build docs [html version]
-
-   .. code:: bash
-
-      $ make html
-
 
 Contribute
 ----------
