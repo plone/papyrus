@@ -46,8 +46,11 @@ Archive your docset using:
 
 Follow further this instructions: https://github.com/Kapeli/Dash-User-Contributions#contribute-a-new-docset
 
+Release
+-------
+
+If we make a release we have to update the build version in plone4.xml and/or plone3.xml, so that Dash and Zeal will update
+
 Missing
 -------
-- Part about uploading to docs.plone.org and changing the build version in
-  plone4.xml/plone3.xml
 - Write a script to automate all this
