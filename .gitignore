@@ -44,6 +44,7 @@ releases
 
 .DS_Store
 docs/apidocs/*
+.Python
 
 *.min.js
 *.min.css
