@@ -43,7 +43,11 @@ help:
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 	@echo "  spellcheck   to run the enchant spellchecker on all sourcefiles"
-	@echo "  debug to run a 'quick' html build without robot-framework"
+	@echo "  debug 	      to run a 'quick' html build without robot-framework"
+	@echo "  externals    to fetch all external docs which we include"
+	@echo "  clean        to clean build dirs"
+	@echo "  test         to run linkcheck and spellcheck"
+	@echo "  changes      to get an overview what changed"
 
 pull:
 	-bin/develop update $(PKGNAME)
@@ -166,7 +170,7 @@ debug:
 	@echo
 	@echo " Running debug build "
 
-test:	linkcheck spelling
+test:	linkcheck spellcheck
 	@echo
 	@echo " link- and spellcheck is finished, for results please " \
 	      " check build/linkcheck/output.txt and build/spell/output.txt"
