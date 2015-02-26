@@ -25,6 +25,8 @@ Steps
     cd plone4
     make html
 
+- tag commit with release, that makes the changelog easier
+- check who did the most commits send prs
 - build dash docset [docs are still in progress]
 - build zeal docset [docs are still missing]
 - upload created static html to vagrant test box
@@ -33,6 +35,7 @@ Steps
 - test new docsets with osx/linux
 - shutdown vagrant test box
 - write changelog
+- write down nr of typos and not working links
 - new pull request for dash user-contributions
 - sync new docsets and html to docs.plone.org
 - announce new version via twitter account and on community
