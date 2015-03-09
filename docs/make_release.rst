@@ -4,7 +4,7 @@ Steps
 *Before* you start with the release process, first gather some data for our statistics, how we are doing.
 - run linkcheck
 - run spell check
-- create a file wit the name: *$date_of_release-stats* to the directory releases with the above collected facts
+- add results to *release-stats.rst*
 
 .. code-block:: bash
 
