@@ -78,7 +78,7 @@ trademark_name = "Plone"
 # The short X.Y version.
 version = [
     '5.0',
-    '4.3',
+#    '4.3',
 #    '3.3',
     ]
 # The full version, including alpha/beta/rc tags.
@@ -150,6 +150,14 @@ html_theme_options = {
         ],
     'doc_language'  : 'en',
     'trademark_name' : 'Plone',
+    'googleanalytics_id': 'UA-1907133-6',
+    'googleanalytics_domain': 'plone.org',
+    'googleanalytics_path': '/',
+    'external_topbar': True,
+    'version_switcher': True,
+    'always_show_version_switcher': True,
+    'always_show_language_switcher': False,
+    'show_version_warning': True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
