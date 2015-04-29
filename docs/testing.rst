@@ -27,3 +27,19 @@ The reason for that is, that these words are not in the dictionary.
 To solve this, you can add these words to the file named **spelling_wordlist.txt**. If you run spell check for the next time, these words will be ignored.
 
 If you add words to the list, please make sure to do that in **alphabetical order** or after you are done just sort the file with regular expressions.
+
+Todo
+----
+
+- write script to sort *spelling_wordlist* in *alphabetical order*, mayve even as *pre-commit* hook ?
+- more testing::
+
+        # command to run tests
+        script: sphinx-build -nW -b html -d _build/doctrees . _build/html
+        # Flags used here, not in `make html`:
+        #  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
+        #  -W   Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.
+
+- find a way to test code snippets which we use inour docs, maybe::
+
+        https://github.com/garbas/sphinx.testing
