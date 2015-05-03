@@ -62,10 +62,10 @@ Quick start
       $ git clone git@github.com:plone/papyrus.git
       $ cd papyrus
 
-      $ virtualenv --python=python2.7
+      $ virtualenv --python=python2.7 .
       $ source bin/activate
       $ pip install -r requirements.txt
-      $ buildout bootstrap
+      $ python bootstrap-buildout.py --setuptools-version=7.0 --version=2.2.5
       $ bin/buildout
 
 2. Retrieve external documentation
