@@ -79,9 +79,9 @@ trademark_name = "Plone"
 #
 # The short X.Y version.
 version = [
-    #'5.0',
-    '4.3',
-    #'3.3',
+    '4',
+    '3',
+    #'5',
 ]
 # The full version, including alpha/beta/rc tags.
 release = '4.3'
@@ -166,7 +166,7 @@ html_theme_options = {
     'external_topbar': True,
     'version_switcher': True,
     'always_show_version_switcher': True,
-    'always_show_language_switcher': False,
+    'always_show_language_switcher': True,
     'show_version_warning': False,
 }
 
