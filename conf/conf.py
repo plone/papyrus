@@ -79,9 +79,9 @@ trademark_name = "Plone"
 # The short X.Y version.
 version = [
 
-#    '5.0',
-#    '4.3',
-    '3.3',
+    '3',
+    '4',
+#    '5',
 ]
 
 # The full version, including alpha/beta/rc tags.
@@ -163,7 +163,7 @@ html_theme_options = {
     'external_topbar': True,
     'version_switcher': True,
     'always_show_version_switcher': True,
-    'always_show_language_switcher': False,
+    'always_show_language_switcher': True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
