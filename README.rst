@@ -1,8 +1,10 @@
 Papyrus - the Plone user manual buildout
 ========================================
 
-This repository is a work in progress to create up-to-date user manual for
-Plone with fully automated screenshots.
+.. class:: foobar
+
+	This repository is a work in progress to create up-to-date user manual for
+	Plone with fully automated screenshots.
 
 You can view the result on http://docs.plone.org
 
