@@ -7,10 +7,12 @@ do
         git pull
         cd -
     else
-        git clone $source $path
+        git clone --depth 1 $source $path
         cd $path
         git config core.sparsecheckout true
         echo docs/ > .git/info/sparse-checkout
+        echo README.rst >> .git/info/sparse-checkout
+        echo CHANGES.rst >> .git/info/sparse-checkout
         git read-tree -m -u HEAD
         cd -
     fi
