@@ -44,7 +44,7 @@ Quick start
 
 .. code:: bash
 
-	$ get_external_doc.sh
+	$ make externals
 
 3. Start server
 
