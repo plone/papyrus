@@ -41,6 +41,7 @@ extensions = [
     #'sphinxcontrib.contributors',
     'sphinxcontrib_robotframework',
     'sphinx.ext.autosummary',
+    'sphinxcontrib.gist',
     'sphinxcontrib.spelling'
 ]
 
