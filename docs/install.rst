@@ -54,6 +54,6 @@ Quick start
 
 4. Build docs [html version]
 
-	.. code:: bash
+.. code:: bash
 
-	$ make html
+    $ make html
