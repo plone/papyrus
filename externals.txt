@@ -11,4 +11,4 @@ https://github.com/plone/plone.app.theming.git,source/documentation/external/plo
 https://github.com/plone/plone.app.testing.git,source/documentation/external/plone.app.testing
 https://github.com/collective/collective.transmogrifier.git,source/documentation/external/collective.transmogrifier
 https://github.com/plone/plone.app.caching.git,source/documentation/external/plone.app.caching
-https://github.com/plone/bobtemplates.plone.git,source/documentation/external/bobtemplates.plone
+https://github.com/plone/bobtemplates.plone.git,source/documentation/develop/addons/bobtemplates.plone
