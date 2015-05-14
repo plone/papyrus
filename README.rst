@@ -31,6 +31,8 @@ Full documentation for end users can be found in the `docs <https://github.com/p
 Installation
 ------------
 
+For installations instructions please read the `installation <https://github.com/plone/papyrus/tree/master/docs/install.rst>`_ docs.
+
 **Requirements:**
 
 Since Papyrus uses robot-framework for fully automated screenshots, the buildout will install Plone.
