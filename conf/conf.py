@@ -42,8 +42,14 @@ extensions = [
     'sphinxcontrib_robotframework',
     'sphinx.ext.autosummary',
     'sphinxcontrib.gist',
+    'sphinxcontrib.dashbuilder',
     'sphinxcontrib.spelling'
 ]
+
+
+# Config for building dash
+dash_name = 'Plone_4'
+dash_icon_file = 'source/documentation/_static/logo.png'
 
 # This is our wordlist with know words, like Github or Plone ...
 spelling_word_list_filename = 'spelling_wordlist.txt'
