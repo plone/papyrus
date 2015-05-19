@@ -48,7 +48,7 @@ extensions = [
 
 
 # Config for building dash
-dash_name = 'Plone_4'
+dash_name = 'Plone_5'
 dash_icon_file = 'source/documentation/_static/logo.png'
 
 # This is our wordlist with know words, like Github or Plone ...
