@@ -24,7 +24,7 @@ APPLY_PROFILES = plone.app.iterate:plone.app.iterate
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 
-.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test
+.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test dash
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -48,6 +48,7 @@ help:
 	@echo "  clean        to clean build dirs"
 	@echo "  test         to run linkcheck and spellcheck"
 	@echo "  changes      to get an overview what changed"
+	@echo "	 dash	      to create a docset"
 
 pull:
 	-bin/develop update $(PKGNAME)
@@ -170,8 +171,10 @@ debug:
 	@echo
 	@echo " Running debug build "
 
-test:
-	linkcheck spellcheck
+dash:
+	$(SPHINXBUILD) -b dash -j 4 $(ALLSPHINXOPTS) build/dash/
+
+test:	linkcheck spellcheck
 	@echo
 	@echo " link- and spellcheck is finished, for results please " \
 	      " check build/linkcheck/output.txt and build/spell/output.txt"
