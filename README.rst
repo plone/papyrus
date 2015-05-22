@@ -71,6 +71,9 @@ Quick start
 
 2. Retrieve external documentation
 
+Check if the script is exectuable
+
+
   .. code:: bash
 
      $ get_external_doc.sh
