@@ -10,10 +10,10 @@ For broken links:
 
 20150309
 --------
-typos: 69 [with external docs]
-broken links: 455
+- typos: 69 [with external docs]
+- broken links: 455
 
 20150518
 -------
-typos: 82 [with external]
-broken links: 319
+- typos: 82 [with external]
+- broken links: 319
