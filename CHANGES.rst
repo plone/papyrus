@@ -6,3 +6,4 @@ Changelog
 
 - Updated Sphinx to 1.3.1 [polyester]
 - Added docset builder [svx]
+- Added requirements.txt [svx]
