@@ -44,7 +44,6 @@ help:
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 	@echo "  spellcheck   to run the enchant spellchecker on all sourcefiles"
 	@echo "  debug        to run a 'quick' html build without robot-framework"
-	@echo "  externals    to fetch all external docs which we include"
 	@echo "  clean        to clean build dirs"
 	@echo "  test         to run linkcheck and spellcheck"
 	@echo "  changes      to get an overview what changed"
@@ -53,8 +52,14 @@ help:
 pull:
 	-bin/develop update $(PKGNAME)
 
+pullall:
+	-bin/develop update *
+
 externals:
-	-./get_external_doc.sh
+	@echo
+	@echo "externals is deprecated, they are fetched at buildout time already"
+	@echo "use pullall instead id you want to update"
+	-bin/develop update *
 
 clean:
 	-rm -rf build/*
