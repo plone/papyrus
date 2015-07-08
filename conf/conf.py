@@ -63,6 +63,10 @@ sphinxcontrib_robotframework_variables = {
     "BROWSER": "Firefox"  # 'Firefox' is the default
 }
 
+# Options for the linkcheck builder
+# Ignore localhost
+linkcheck_ignore = [r'http://localhost:\d+/']
+
 # See http://sphinx-doc.org/ext/todo.html#confval-todo_include_todos
 todo_include_todos = True
 
