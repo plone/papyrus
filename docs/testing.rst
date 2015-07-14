@@ -39,7 +39,7 @@ To sort in alphabetical order you can just do:
 Todo
 ----
 
-- write script to sort *spelling_wordlist* in *alphabetical order*, mayve even as *pre-commit* hook ?
+- write script to sort *spelling_wordlist* in *alphabetical order*, maybe even as *pre-commit* hook ?
 - more testing::
 
         # command to run tests
