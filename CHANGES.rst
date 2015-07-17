@@ -1,6 +1,12 @@
 Changelog
 =========
 
+$NEXT_RELEASE
+-------------
+
+- Added option, to ignore localhost to sphinx config [svx]
+- Changed permission of get_externals.sh to make it  [svx]  
+
 20150518
 ---------
 
