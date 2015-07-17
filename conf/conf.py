@@ -43,7 +43,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinxcontrib.gist',
     'sphinxcontrib.dashbuilder',
-    'sphinxcontrib.spelling'
+    'sphinxcontrib.spelling',
+    'sphinxcontrib.youtube',
 ]
 
 
