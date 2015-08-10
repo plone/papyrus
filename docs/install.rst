@@ -33,7 +33,7 @@ Quick start
 
 	$ git clone git@github.com:plone/papyrus.git
 	$ cd papyrus
-    $ git checkout -b 5.0
+    	$ git checkout -b 5.0
 
 	$ virtualenv --python=python2.7 .
 	$ source bin/activate
