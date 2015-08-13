@@ -167,7 +167,7 @@ spellcheck:
               " or in build/spell/output.txt."
 
 debug:
-	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) build/html/en
+	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log build/html/en
 	@echo
 	@echo " Running debug build "
 

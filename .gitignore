@@ -66,3 +66,4 @@ buildout-cache/eggs/*
 var
 sphinx-build.log
 sphinx-latex.log
+log/*
