@@ -4,6 +4,9 @@ Changelog
 $NEXT_RELEASE
 -------------
 
+
+- extended exclude_patterns to not process CHANGES.rst and LICENSE.rst files for contributed externals (polyester)
+- create a (separate) logfile when you're doing "make debug" (polyester)
 - Added option, to ignore localhost to sphinx config [svx]
 - Changed permission of get_externals.sh to make it  [svx]  
 
