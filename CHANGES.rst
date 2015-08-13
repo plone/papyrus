@@ -1,11 +1,6 @@
 Changelog
 =========
 
-dev (p5 branch)
-
-- extended exclude_patterns to not process CHANGES.rst and LICENSE.rst files for contributed externals (polyester)
-- create a (separate) logfile when you're doing "make debug" (polyester)
-
 
 20150518
 ---------
