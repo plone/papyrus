@@ -19,8 +19,8 @@ ALLSPHINXOPTS   = -d build/doctrees -c conf $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) s
 I18NOPTS        = --pot-dir source/$(PKGNAME)/_locales -c conf
 
 # Robot-server variables
-CONFIGURE_PACKAGES = plone.app.iterate
-APPLY_PROFILES = plone.app.iterate:plone.app.iterate
+CONFIGURE_PACKAGES = plone.app.contenttypes
+APPLY_PROFILES = plone.app.contenttypes:plone-content
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 

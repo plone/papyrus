@@ -4,11 +4,11 @@ Changelog
 $NEXT_RELEASE
 -------------
 
-
+- update makefile to have "make robot" provide a full environment with demo content (polyester)
 - extended exclude_patterns to not process CHANGES.rst and LICENSE.rst files for contributed externals (polyester)
 - create a (separate) logfile when you're doing "make debug" (polyester)
 - Added option, to ignore localhost to sphinx config [svx]
-- Changed permission of get_externals.sh to make it  [svx]  
+- Changed permission of get_externals.sh to make it  [svx]
 
 20150518
 ---------
@@ -21,4 +21,4 @@ $NEXT_RELEASE
 - Updated docs about papyrus [svx]
 - Added the possibility to include gists straight from github [svx]
 - Updated install.rst [polyester]
-- Added dash-builder for creating docsets [svx]  
+- Added dash-builder for creating docsets [svx]

@@ -79,13 +79,8 @@ Check if the script is exectuable
 
      $ get_external_doc.sh
 
-3. Start server
 
-   .. code:: bash
-
-      $ make serve
-
-4. Build docs [html version]
+3. Build docs [html version]
 
    .. code:: bash
 
