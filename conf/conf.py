@@ -53,6 +53,7 @@ dash_icon_file = 'source/documentation/_static/logo.png'
 
 # This is our wordlist with know words, like Github or Plone ...
 spelling_word_list_filename= 'spelling_wordlist.txt'
+spelling_ignore_pypi_package_names=True
 
 # Enable Robot Framework tests during Sphinx compilation:
 sphinxcontrib_robotframework_enabled = True  # 'True' is the default
