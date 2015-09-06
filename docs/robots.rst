@@ -10,6 +10,20 @@ them in different languages or with different themes.
 __ http://jenkins.plone.org/view/User%20Docs/job/collective.usermanual/
 
 
+
+TL;DR
+-----
+
+Look at an example in `Change the Logo <https://raw.githubusercontent.com/plone/documentation/5.0/adapt-and-extend/change-the-logo.rst>`__
+
+When working on making robot-screenshots, your development will be much faster if you use the following order:
+
+- run "make html" once to get everything going
+- run "make serve"
+- open another terminal, run "make robot" from there. It will only create the new or edited screenshots
+- wash, rinse, repeat
+
+
 Rules
 -----
 

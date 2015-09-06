@@ -57,34 +57,17 @@ Quick start
 
 1. Clone and bootstrap
 
-   .. code:: bash
+.. code:: bash
 
-      $ git clone git@github.com:plone/papyrus.git
-      $ cd papyrus
+	$ git clone -b 5.0 git@github.com:plone/papyrus.git
+	$ cd papyrus
+	$ virtualenv --python=python2.7 .
+	$ source bin/activate
+	$ pip install -r requirements.txt
+	$ python bootstrap-buildout.py --setuptools-version=18.0.1 --version=2.4.0
+	$ bin/buildout
 
-      $ virtualenv --python=python2.7 .
-      $ source bin/activate
-      $ git checkout 5.0
-      $ pip install -r requirements.txt
-      $ python bootstrap-buildout.py --setuptools-version=7.0 --version=2.2.5
-      $ bin/buildout
-
-2. Retrieve external documentation
-
-Check if the script is exectuable
-
-
-  .. code:: bash
-
-     $ get_external_doc.sh
-
-3. Start server
-
-   .. code:: bash
-
-      $ make serve
-
-4. Build docs [html version]
+2. Build docs [html version]
 
    .. code:: bash
 
@@ -100,7 +83,7 @@ Contribute
 License
 -------
 
-Copyright © 2013-2014 Plone Foundation and individual contributors.
+Copyright © 2013-2015 Plone Foundation and individual contributors.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License

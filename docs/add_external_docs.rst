@@ -20,13 +20,15 @@ To accomplish pulling in those docs, and **only** those docs, we have to declare
 
 https://github.com/plone/papyrus/blob/master/checkouts-documentation.cfg
 
-The version of external documentation should match the release the main documentation targets at.
+The version of external documentation should match the release that the main documentation targets.
 
 First, you edit this file.
 
-If the source is not part of the ``buildout.coredev`` ``sources.cfg`` used by the version of this documentation you have to add it to the ``[sources]`` section.
+If the external doc is not part of the Plone standard sources used by the version of this documentation you have to add it to the ``[sources]`` section.
 
-I any case you must add some information about the documentation to section ``[assembly-information]``. See the notes there how to do this.
+In any case you must add information about the new external docs to section ``[assembly-information]``. See the notes there how to do this.
 
 Note that this doesn't affect the actual **placement** of those docs into the tree; you'll have to refer to it at the wanted location, usually with a TOC command.
 See the mindmap for ideas, and consult with the team first when in doubt where this add-on documentation should go.
+
+If the external docs are placed into the documentation anywhere **outside** the 'external' subdir, you must also add this location to the source/documentation/.gitignore file!

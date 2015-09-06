@@ -53,6 +53,7 @@ dash_icon_file = 'source/documentation/_static/logo.png'
 
 # This is our wordlist with know words, like Github or Plone ...
 spelling_word_list_filename= 'spelling_wordlist.txt'
+spelling_ignore_pypi_package_names=True
 
 # Enable Robot Framework tests during Sphinx compilation:
 sphinxcontrib_robotframework_enabled = True  # 'True' is the default
@@ -62,6 +63,11 @@ sphinxcontrib_robotframework_quiet = True  # 'False' is the default
 sphinxcontrib_robotframework_variables = {
     "BROWSER": "Firefox"  # 'Firefox' is the default
 }
+
+# Options for the linkcheck builder
+# Ignore localhost
+linkcheck_ignore = [r'http://localhost:\d+/']
+
 
 # See http://sphinx-doc.org/ext/todo.html#confval-todo_include_todos
 todo_include_todos = True
@@ -103,7 +109,13 @@ release = '5.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['README.rst', '_*.rst']
+exclude_patterns = ['README.rst', '_*.rst',
+                    'external/plone.api/docs/CHANGES.rst',
+                    'develop/plone-coredev/es/*',
+                    'develop/plone-coredev/pt_BR',
+                    'external/Products.TinyMCE/docs/source/contributors.rst',
+                    '**/CHANGES.rst',
+                    '**/LICENSE.rst',]
 
 # Announce that we have a opensearch plugin
 html_use_opensearch = 'http://docs.plone.org'

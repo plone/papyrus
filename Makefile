@@ -19,8 +19,8 @@ ALLSPHINXOPTS   = -d build/doctrees -c conf $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) s
 I18NOPTS        = --pot-dir source/$(PKGNAME)/_locales -c conf
 
 # Robot-server variables
-CONFIGURE_PACKAGES = plone.app.iterate
-APPLY_PROFILES = plone.app.iterate:plone.app.iterate
+CONFIGURE_PACKAGES = plone.app.contenttypes
+APPLY_PROFILES = plone.app.contenttypes:plone-content
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 
@@ -172,7 +172,7 @@ spellcheck:
               " or in build/spell/output.txt."
 
 debug:
-	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) build/html/en
+	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log build/html/en
 	@echo
 	@echo " Running debug build "
 

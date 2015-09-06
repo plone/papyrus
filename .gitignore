@@ -62,3 +62,4 @@ picked.cfg
 pip.log
 sphinx-build.log
 sphinx-latex.log
+sphinx-debug.log
