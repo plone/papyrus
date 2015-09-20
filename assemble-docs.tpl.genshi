@@ -21,8 +21,8 @@ if [ ! -f "${parts['buildout']['sources-dir']}/${package}/.git/info/sparse-check
     cd - >/dev/null
 fi
 {% end %}{# if relpath #}\
-if [ ! -L "${parts['buildout']['docs-dir']}/${target}" ]; then     +
-    echo "- ${package} symlinked at ${parts['buildout']['docs-dir']}/${target}"        +    ln -s ${parts['buildout']['sources-dir']}/${package} ${parts['buildout']['docs-dir']}/${target}
+if [ ! -L "${parts['buildout']['docs-dir']}/${target}" ]; then
+    echo "- ${package} symlinked at ${parts['buildout']['docs-dir']}/${target}"
     ln -s ${parts['buildout']['sources-dir']}/${package} ${parts['buildout']['docs-dir']}/${target}
 fi
 {% end %}{# if not command #}\
