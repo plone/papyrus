@@ -43,7 +43,7 @@ Contribute
 License
 -------
 
-Copyright © 2013-2014 Plone Foundation and individual contributors.
+Copyright © 2013-2015 Plone Foundation and individual contributors.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
