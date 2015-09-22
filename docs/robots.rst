@@ -1,9 +1,7 @@
 Robots
 ======
 
-Writing robot-scripts for screenshots is a daunting task at first,
-but once it's done, it's easy to tweak those screenshots, re-generate translate
-them in different languages or with different themes.
+Writing robot-scripts for screenshots is a daunting task at first, but once it's done, it's easy to tweak those screenshots, re-generate translate them in different languages or with different themes.
 
 `Robot-refactored screenshots also work as acceptance tests for Plone.`__
 

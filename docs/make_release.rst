@@ -20,7 +20,7 @@ Steps
 .. code-block:: bash
 
     cd /home/svx/Projects/PloneDocs
-    git clone git@github.com/plone/papyrus.git plone5
+    git clone https://github.com/plone/papyrus.git plone5
 
     cd plone5
     make html

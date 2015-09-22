@@ -31,7 +31,7 @@ Quick start
 
 .. code:: bash
 
-	$ git clone -b 5.0 git@github.com:plone/papyrus.git
+	$ git clone -b 5.0 https://github.com/plone/papyrus.git
 	$ cd papyrus
 	$ virtualenv --python=python2.7 .
 	$ source bin/activate
@@ -47,3 +47,6 @@ Quick start
 
 
 Note that this will also generate robotscreenshots, so you will see Firefox opening multiple times.
+
+Re-running "make html" will only create robotscreenshots that are new or changed, so the whole process is quicker.
+When you are not changing robotscreenshots, you can also run "make debug" which will be significantly faster on multi-core machines.
