@@ -24,7 +24,7 @@ APPLY_PROFILES = plone.app.contenttypes:plone-content
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 
-.PHONY: help clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test dash
+.PHONY: help fast-link-check clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test dash
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -48,6 +48,7 @@ help:
 	@echo "  test         to run linkcheck and spellcheck"
 	@echo "  changes      to get an overview what changed"
 	@echo "	 dash	      to create a docset"
+	@echo "  fast-link-check to check links without robot-framework"
 
 pull:
 	-bin/develop update $(PKGNAME)
@@ -154,6 +155,12 @@ linkcheck:
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in build/linkcheck/output.txt."
+
+fast-link-check:
+	$(SPHINXBUILD) -b linkcheck -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) build/linkcheck
+	@echo
+	@echo "Link check complete; look for any errors in the above output " \
+	    	"or in build/linkcheck/output.txt."
 
 doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) build/doctest
