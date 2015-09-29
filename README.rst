@@ -23,15 +23,15 @@ Features
 Documentation
 -------------
 
-Full documentation for end users can be found in the `docs <https://github.com/plone/papyrus/tree/master/docs>`_ folder.
+Full documentation for end users can be found in the `docs <https://github.com/plone/papyrus/tree/4.3/docs>`_ folder.
 
-`Working with Robots <https://github.com/plone/papyrus/tree/master/docs/robots.rst>`_
+`Working with Robots <https://github.com/plone/papyrus/tree/4.3/docs/robots.rst>`_
 
 
 Installation
 ------------
 
-For installations instructions please read the `installation <https://github.com/plone/papyrus/tree/master/docs/install.rst>`_ docs.
+For installations instructions please read the `installation <https://github.com/plone/papyrus/tree/4.3/docs/install.rst>`_ docs.
 
 
 Contribute
