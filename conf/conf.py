@@ -101,8 +101,8 @@ trademark_name = "Plone"
 # The short X.Y version.
 version = [
     '4',
+    '5',
     '3',
-    #'5',
 ]
 # The full version, including alpha/beta/rc tags.
 release = '4.3'
