@@ -36,7 +36,7 @@ Quick start
 	$ virtualenv --python=python2.7 .
 	$ source bin/activate
 	$ pip install -r requirements.txt
-	$ python bootstrap-buildout.py --setuptools-version=18.0.1 --version=2.4.0
+	$ python bootstrap-buildout.py --setuptools-version=18.3.1 --version=2.4.3
 	$ bin/buildout
 
 2. Build docs [html version]
