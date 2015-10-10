@@ -1,26 +1,23 @@
 Generating Dash Docsets
 =======================
 
-Q: What is Dash http://kapeli.com/dash ? 
+Q: What is Dash http://kapeli.com/dash ?
 
 A: Dash is an API Documentation Browser and Code Snippet Manager. Dash stores snippets of code and instantly searches offline documentation sets for 150+ APIs.
 
-Use http://pypi.python.org/pypi/doc2dash to generate docsets from Python, Sphinx or PyDoctor-generated documentation.
 
 Setup
 =====
 
-Install doc2dash, since there are some 'version dependecies problems' when installing doc2dash via buildout for now, that is the reason why we use pip
+The docsets are built using a Sphinx extension: `sphinxcontrib.dashbuilder <https://pypi.python.org/pypi/sphinxcontrib-dashbuilder>`_
+
+Building the docset is best done after a complete 'fresh' run of generating the docs, so do in sequence::
 
 .. code-block::
 
-    pip install --user doc2dash
-
-Building the docset::
-
-.. code-block::
-
-    doc2dash -n Plone build/html/en
+    make clean
+    make html
+    make dash
 
 Archive your docset using:
 
