@@ -61,6 +61,7 @@ sphinxcontrib_robotframework_quiet = True  # 'False' is the default
 
 # Configure Robot Frameowrk tests to use Firefox
 sphinxcontrib_robotframework_variables = {
+#    "BROWSER": "phantomjs"  
     "BROWSER": "Firefox"  # 'Firefox' is the default
 }
 
@@ -174,11 +175,11 @@ html_theme_path = sphinx.themes.plone.get_html_theme_path()
 html_theme_options = {
 #	"rightsidebar": "false",
     'doc_languages' : [
-#        {'lang_code':'en','lang_name':'English'},
+        {'lang_code':'en','lang_name':'English'},
 #        {'lang_code':'de','lang_name':'German'},
 #        {'lang_code':'it','lang_name':'Italian'},
         ],
-    'doc_language'  : 'en',
+#    'doc_language'  : 'en',
     'trademark_name' : 'Plone',
     'googleanalytics_id': 'UA-1907133-6',
     'googleanalytics_domain': 'plone.org',
@@ -186,7 +187,7 @@ html_theme_options = {
     'external_topbar': True,
     'version_switcher': True,
     'always_show_version_switcher': True,
-    'always_show_language_switcher': False,
+    'always_show_language_switcher': True,
     'show_version_warning': True,
 }
 
