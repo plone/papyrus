@@ -28,7 +28,11 @@ ROBOTSERVER_OPTS = -v
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html      to make standalone HTML files"
+	@echo "  html      to make standalone HTML files without screenshots"
+	@echo "  screenshot  	to generate the screenshots using robotframework"
+	@echo "  screenshots-phantomjs	to generate the screenshots using robotframework and the phantomjs browser, which needs to be available on your path"
+	@echo "	 full       to create a full, fresh build including screenshots"
+	@echo "  pullall    to refresh and update all external repositories"
 	@echo "  dirhtml   to make HTML files named index.html in directories"
 	@echo "  pickle    to make pickle files"
 	@echo "  gettext   to make i18n messages files"
@@ -62,6 +66,9 @@ externals:
 	@echo "use pullall instead id you want to update"
 	-bin/develop update *
 
+full: clean screenshots html
+
+
 clean:
 	-rm -rf build/*
 	-rm -rf source/$(PKGNAME)/_robot/*.png
@@ -69,9 +76,19 @@ clean:
 html: $(foreach lang,$(LANGS),html-$(lang))
 
 html-%: $(SPHINX_DEPENDENCIES)
-	LANGUAGE=$* $(SPHINXBUILD) -b html -w log/sphinx-build.log -D language=$* $(ALLSPHINXOPTS) build/html/$*
+	LANGUAGE=$* $(SPHINXBUILD) -b html -w log/sphinx-build.log -D language=$* -D sphinxcontrib_robotframework_enabled=0 $(ALLSPHINXOPTS) build/html/$*
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
+
+screenshots:
+	bin/pybot  --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
+	@echo
+	@echo "Screenshot generation finished"
+
+screenshots-phantomjs:
+	bin/pybot  --variable BROWSER:phantomjs --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
+	@echo
+	@echo "Screenshot generation finished"
 
 gettext:
 	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" source/$(PKGNAME) source/$(PKGNAME)/_locales

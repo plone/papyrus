@@ -16,7 +16,7 @@ Look at an example in `Change the Logo <https://raw.githubusercontent.com/plone/
 
 When working on making robot-screenshots, your development will be much faster if you use the following order:
 
-- run "make html" once to get everything going
+- run "make screenshots" once to get everything going
 - run "make serve"
 - open another terminal, run "make robot" from there. It will only create the new or edited screenshots
 - wash, rinse, repeat
@@ -70,7 +70,7 @@ We support two different build modes:
 * standalone builds
 * robot-server -dependent builds.
 
-*Standalone*-build is executed with familiar ``make html`` and with it
+*Standalone*-build is executed with familiar ``make full`` and with it
 each document can setup the required Plone sandboxes during the Sphinx
 compilation process by itself. It's good for building the complete docs,
 but is slow when used for writing the robot code for screenshots
@@ -291,6 +291,10 @@ Advanced topics
    with environment variables when starting *robot-server*. See Makefile for
    examples.
 
+9. How to exclude tests that are not working:
+
+   Tag any test with ``wip-*``, so for instance "wip-needs_review" or "wip-only_works_on_windows"
+   See http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tagging-test-cases
 
 Multilingual demo
 -----------------

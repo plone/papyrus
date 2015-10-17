@@ -39,14 +39,27 @@ Quick start
 	$ python bootstrap-buildout.py --setuptools-version=18.3.1 --version=2.4.3
 	$ bin/buildout
 
-2. Build docs [html version]
+2. Build docs [html version, no screenshots]
 
-.. code:: bash
+   .. code:: bash
 
       $ make html
 
+To generate just screenshots, do
+
+   .. code:: bash
+
+      $ make screenshots
+
+To generate the full documentation, do
+
+   .. code:: bash
+
+      $ make full
+
+(this is equivalent to "make clean && make screenshots && make html")
 
 Note that this will also generate robotscreenshots, so you will see Firefox opening multiple times.
 
-Re-running "make html" will only create robotscreenshots that are new or changed, so the whole process is quicker.
-When you are not changing robotscreenshots, you can also run "make debug" which will be significantly faster on multi-core machines.
+
+When you are not changing robotscreenshots, you can also run "make debug" which will be faster on multi-core machines.
