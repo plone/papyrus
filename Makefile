@@ -29,10 +29,10 @@ ROBOTSERVER_OPTS = -v
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html      to make standalone HTML files without screenshots"
-	@echo "  screenshots	to generate the screenshots using robotframework"
+	@echo "  screenshot  	to generate the screenshots using robotframework"
 	@echo "  screenshots-phantomjs	to generate the screenshots using robotframework and the phantomjs browser, which needs to be available on your path"
-	@echo "	 full		to create a full, fresh build including screenshots"
-	@echo "  pullall	to refresh and update all external repositories"
+	@echo "	 full       to create a full, fresh build including screenshots"
+	@echo "  pullall    to refresh and update all external repositories"
 	@echo "  dirhtml   to make HTML files named index.html in directories"
 	@echo "  pickle    to make pickle files"
 	@echo "  gettext   to make i18n messages files"
