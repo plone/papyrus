@@ -61,10 +61,9 @@ sphinxcontrib_robotframework_quiet = True  # 'False' is the default
 
 # Configure Robot Frameowrk tests to use Firefox
 sphinxcontrib_robotframework_variables = {
-#    "BROWSER": "phantomjs"  
+#    "BROWSER": "phantomjs"
     "BROWSER": "Firefox"  # 'Firefox' is the default
 }
-
 # Options for the linkcheck builder
 # Ignore localhost
 linkcheck_ignore = [r'http://localhost:\d+/',r'http://localhost:8080', r'http://127.0.0.1:8080', r'http://127.0.0.1' ]

@@ -66,3 +66,9 @@ sphinx-debug.log
 sphinx-latex.log
 src/
 var/
+ghostdriver.log
+log.html
+output.html
+report.html
+output.xml
+

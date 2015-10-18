@@ -67,12 +67,23 @@ Quick start
 	$ python bootstrap-buildout.py --setuptools-version=18.3.1 --version=2.4.3
 	$ bin/buildout
 
-2. Build docs [html version]
+2. Build docs [html version, no screenshots]
 
    .. code:: bash
 
       $ make html
 
+To generate just screenshots, do
+
+   .. code:: bash
+
+      $ make screenshots
+
+To generate the full documentation, do
+
+   .. code:: bash
+
+      $ make full
 
 Contribute
 ----------
