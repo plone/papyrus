@@ -99,12 +99,13 @@ trademark_name = "Plone"
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-# The short X.Y version.
+# The versions appearing in the version drop-down. We use 'newest first'
+# You should set the selected_version in the html_theme_options further in the file.
 version = [
     '5',
     '4',
     '3',
-    ]
+]
 # The full version, including alpha/beta/rc tags.
 release = '5.0'
 
@@ -188,6 +189,7 @@ html_theme_options = {
     'always_show_version_switcher': True,
     'always_show_language_switcher': True,
     'show_version_warning': True,
+    'selected_version': '5',
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
