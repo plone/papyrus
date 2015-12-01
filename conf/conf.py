@@ -86,7 +86,7 @@ version = [
 
     '3',
     '4',
-#    '5',
+    '5',
 ]
 
 # The full version, including alpha/beta/rc tags.
