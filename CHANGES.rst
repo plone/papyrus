@@ -4,6 +4,7 @@ Changelog
 $NEXT_RELEASE
 -------------
 
+- Add plone.testing, which is referenced by plone/documentation. [thet]
 - update makefile to have "make robot" provide a full environment with demo content (polyester)
 - extended exclude_patterns to not process CHANGES.rst and LICENSE.rst files for contributed externals (polyester)
 - create a (separate) logfile when you're doing "make debug" (polyester)
@@ -22,4 +23,4 @@ $NEXT_RELEASE
 - Updated docs about papyrus [svx]
 - Added the possibility to include gists straight from github [svx]
 - Updated install.rst [polyester]
-- Added dash-builder for creating docsets [svx]  
+- Added dash-builder for creating docsets [svx]
