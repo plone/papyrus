@@ -4,6 +4,7 @@ Changelog
 $NEXT_RELEASE
 -------------
 
+- Include all *.rst files for external sparse-checkout turned repositories. [thet]
 - Add plone.testing, which is referenced by plone/documentation. [thet]
 - update makefile to have "make robot" provide a full environment with demo content (polyester)
 - extended exclude_patterns to not process CHANGES.rst and LICENSE.rst files for contributed externals (polyester)
