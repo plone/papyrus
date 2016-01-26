@@ -77,7 +77,7 @@ To generate just screen-shots, do
 
 .. code:: bash
 
-    $ make screen-shots
+    $ make screenshots
 
 To generate the full documentation, do
 
@@ -94,7 +94,7 @@ Contribute
 License
 -------
 
-Copyright © 2013-2015 Plone Foundation and individual contributors.
+Copyright © 2013-2016 Plone Foundation and individual contributors.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
