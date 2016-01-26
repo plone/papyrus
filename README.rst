@@ -2,7 +2,7 @@ Papyrus - the Plone user manual buildout
 ========================================
 
 This repository is a work in progress to create up-to-date user manual for
-Plone with fully automated screenshots.
+Plone with fully automated screen-shots.
 
 You can view the result on http://docs.plone.org
 
@@ -12,7 +12,7 @@ You can view the result on http://docs.plone.org
 Features
 ---------
 - Building automated documentation
-- fully automated screenshots
+- fully automated screen-shots
 - Spell check
 - Link check
 - PDF creation
@@ -21,9 +21,9 @@ Features
 Documentation
 -------------
 
-Full documentation for end users can be found in the `docs <https://github.com/plone/papyrus/tree/master/docs>`_ folder.
+Full documentation for end users can be found in the `docs <https://github.com/plone/papyrus/tree/5.0/docs>`_ folder.
 
-`Working with Robots <https://github.com/plone/papyrus/tree/master/docs/robots.rst>`_
+`Working with Robots <https://github.com/plone/papyrus/tree/5.0/docs/robots.rst>`_
 
 
 Installation
@@ -31,9 +31,9 @@ Installation
 
 **Requirements:**
 
-Since Papyrus uses robot-framework for fully automated screenshots, the buildout will install Plone.
+Since Papyrus uses robot-framework for fully automated screen-shots, the buildout will install Plone.
 Also, to generate PDF, you'll need latex, which is a large package.
-To install Papyrus with all features and possibilites on Ubuntu 14.04 you will need:
+To install Papyrus with all features and possibilities on Ubuntu 14.04 you will need:
 
 .. code-block:: bash
 
@@ -67,17 +67,17 @@ Quick start
 	$ python bootstrap-buildout.py --setuptools-version=18.3.1 --version=2.4.3
 	$ bin/buildout
 
-2. Build docs [html version, no screenshots]
+2. Build docs [html version, no screen-shots]
 
    .. code:: bash
 
       $ make html
 
-To generate just screenshots, do
+To generate just screen-shots, do
 
    .. code:: bash
 
-      $ make screenshots
+      $ make screen-shots
 
 To generate the full documentation, do
 
