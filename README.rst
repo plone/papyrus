@@ -69,21 +69,21 @@ Quick start
 
 2. Build docs [html version, no screen-shots]
 
-   .. code:: bash
+.. code:: bash
 
-      $ make html
+    $ make html
 
 To generate just screen-shots, do
 
-   .. code:: bash
+.. code:: bash
 
-      $ make screen-shots
+    $ make screen-shots
 
 To generate the full documentation, do
 
-   .. code:: bash
+.. code:: bash
 
-      $ make full
+    $ make full
 
 Contribute
 ----------
