@@ -117,7 +117,8 @@ exclude_patterns = ['README.rst', '_*.rst',
                     'develop/plone-coredev/pt_BR',
                     'external/Products.TinyMCE/docs/source/contributors.rst',
                     '**/CHANGES.rst',
-                    '**/LICENSE.rst',]
+                    '**/LICENSE.rst',
+                    '_locales']
 
 # Announce that we have a opensearch plugin
 html_use_opensearch = 'http://docs.plone.org'
