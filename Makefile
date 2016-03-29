@@ -91,7 +91,7 @@ screenshots-phantomjs:
 	@echo "Screenshot generation finished"
 
 gettext:
-	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" source/$(PKGNAME) source/$(PKGNAME)/_locales
+	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" -D sphinxcontrib_robotframework_enabled=0 source/$(PKGNAME) source/$(PKGNAME)/_locales
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
