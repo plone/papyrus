@@ -115,6 +115,7 @@ exclude_patterns = ['README.rst', '_*.rst',
                     'external/plone.api/docs/CHANGES.rst',
                     'develop/plone-coredev/es/*',
                     'develop/plone-coredev/pt_BR',
+                    '_locales/*',
                     'external/Products.TinyMCE/docs/source/contributors.rst',
                     '**/CHANGES.rst',
                     '**/LICENSE.rst',]
