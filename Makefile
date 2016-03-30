@@ -16,6 +16,7 @@ LANGS		= en
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees -c conf $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
+DASHBUILD	= -d build/doctrees -c dash $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
 I18NOPTS        = --pot-dir source/$(PKGNAME)/_locales -c conf
 
 # Robot-server variables
@@ -200,7 +201,7 @@ debug:
 	@echo " Running debug build "
 
 dash:
-	$(SPHINXBUILD) -b dash -j 4 $(ALLSPHINXOPTS) build/dash/
+	$(SPHINXBUILD) -b dash -j 4 $(DASHBUILD) build/dash/
 
 test:	linkcheck spellcheck
 	@echo
