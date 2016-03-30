@@ -1,8 +1,21 @@
 Changelog
 =========
 
-$NEXT_RELEASE
--------------
+
+201603$
+-------
+
+- Added Fedora OS and links to Debian,Ubuntu to README [svx]
+- Updaded docs about dash (docset building) [svx]
+- Fixed broken links [svx]
+- Fixed various typos [svx]
+- Add own conf for building dash Fix:#84 [svx]
+- Disable .po creation and robots for po Fix:#98 [svx]
+- Update buildout versions Fix:#96
+
+
+20151208
+--------
 
 - Add plone.testing, which is referenced by plone/documentation. [thet]
 - update makefile to have "make robot" provide a full environment with demo content (polyester)
