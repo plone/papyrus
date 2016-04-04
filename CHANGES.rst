@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-201603$
--------
+20160330
+--------
 
 - Added Fedora OS and links to Debian,Ubuntu to README [svx]
 - Updaded docs about dash (docset building) [svx]
