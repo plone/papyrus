@@ -16,7 +16,7 @@ if [ ! -f "${parts['buildout']['sources-dir']}/${package}/.git/info/sparse-check
     git config core.sparsecheckout true
     echo ${relpath}/ > .git/info/sparse-checkout
     echo README.rst >> .git/info/sparse-checkout
-    echo CHANGES.rst >> .git/info/sparse-checkout
+    #echo CHANGES.rst >> .git/info/sparse-checkout
     git read-tree -m -u HEAD
     cd - >/dev/null
 fi
