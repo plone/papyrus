@@ -7,3 +7,4 @@ Contributors
 - Patrick Gerken <do3cc>
 - Sven Strack <svx>
 - Jens Klein <jensens>
+- Steve McMahon <smcmahon>
