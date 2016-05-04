@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016xxxx
+--------
+
+- Pull ansible docs from STABLE branch [smcmahon]
 
 20160330
 --------
