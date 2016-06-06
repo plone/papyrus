@@ -21,7 +21,7 @@ Features
 Documentation
 -------------
 
-Full documentation for end users can be found in the `docs <https://github.com/plone/papyrus/tree/5.0/docs>`_ folder.
+Full documentation for end users can be found in the `docs <https://github.com/plone/papyrus/tree/5.1/docs>`_ folder.
 
 `Working with Robots <https://github.com/plone/papyrus/tree/5.0/docs/robots.rst>`_
 
@@ -59,7 +59,7 @@ Quick start
 
 .. code:: bash
 
-	$ git clone -b 5.0 git@github.com:plone/papyrus.git
+	$ git clone -b 5.1 git@github.com:plone/papyrus.git
 	$ cd papyrus
 	$ virtualenv --python=python2.7 .
 	$ source bin/activate

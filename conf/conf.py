@@ -49,7 +49,7 @@ extensions = [
 
 
 # Config for building dash
-dash_name = 'Plone_5'
+dash_name = 'Plone_5.1'
 dash_icon_file = 'source/documentation/_static/logo.png'
 
 # This is our wordlist with know words, like Github or Plone ...
@@ -103,12 +103,13 @@ trademark_name = "Plone"
 # The versions appearing in the version drop-down. We use 'newest first'
 # You should set the selected_version in the html_theme_options further in the file.
 version = [
+    '5.1',
     '5',
     '4',
     '3',
 ]
 # The full version, including alpha/beta/rc tags.
-release = '5.0'
+release = '5.1'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
