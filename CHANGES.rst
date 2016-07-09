@@ -5,6 +5,7 @@ Changelog
 --------
 
 - Pull ansible docs from STABLE branch [smcmahon]
+- add option to use Chrome, update robotframework versions [polyester]
 
 20160330
 --------
