@@ -30,9 +30,9 @@ ROBOTSERVER_OPTS = -v
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html      to make standalone HTML files without screenshots"
-	@echo "  screenshot  	to generate the screenshots using robotframework"
+	@echo "  screenshots-firefox  	to generate the screenshots using robotframework and the Firefox browser"
+	@echo "  screenshots-chrome  	to generate the screenshots using robotframework and the Chrome browser"
 	@echo "  screenshots-phantomjs	to generate the screenshots using robotframework and the phantomjs browser, which needs to be available on your path"
-	@echo "	 full       to create a full, fresh build including screenshots"
 	@echo "  pullall    to refresh and update all external repositories"
 	@echo "  dirhtml   to make HTML files named index.html in directories"
 	@echo "  pickle    to make pickle files"
@@ -67,7 +67,6 @@ externals:
 	@echo "use pullall instead id you want to update"
 	-bin/develop update *
 
-full: clean screenshots html
 
 
 clean:
@@ -81,8 +80,8 @@ html-%: $(SPHINX_DEPENDENCIES)
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
 
-screenshots:
-	bin/pybot  --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
+screenshots-firefox:
+	bin/pybot --variable BROWSER:firefox --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
 	@echo
 	@echo "Screenshot generation finished"
 
@@ -90,6 +89,12 @@ screenshots-phantomjs:
 	bin/pybot  --variable BROWSER:phantomjs --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
 	@echo
 	@echo "Screenshot generation finished"
+
+screenshots-chrome:
+	bin/pybot  --variable BROWSER:chrome --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
+	@echo
+	@echo "Screenshot generation finished"
+
 
 gettext:
 	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" -D sphinxcontrib_robotframework_enabled=0 source/$(PKGNAME) source/$(PKGNAME)/_locales

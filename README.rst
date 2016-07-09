@@ -73,17 +73,23 @@ Quick start
 
     $ make html
 
-To generate just screen-shots, do
+To generate screen-shots, you will have to set up a browser and a webdriver to work with robotframework.
+See docs/webdriver.rst for how to install these for Firefox, Chrome and Phantomjs
+Once you have done that, you can use one of the following commands:
 
 .. code:: bash
 
-    $ make screenshots
+    $ make screenshots-firefox
+    $ make screenshots-chrome
+    $ make screenshots-phantomjs
 
 To generate the full documentation, do
 
 .. code:: bash
 
-    $ make full
+    $ make clean
+    $ make screenshots-$browser (choose one, Chrome gives good results)
+    $ make html
 
 Contribute
 ----------
