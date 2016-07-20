@@ -4,6 +4,7 @@ Changelog
 2016xxxx
 --------
 
+- No longer checkout and symlink bobtemplates.plone, which is already included. [maurits]
 - Pull ansible docs from STABLE branch [smcmahon]
 - add option to use Chrome, update robotframework versions [polyester]
 
