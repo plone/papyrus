@@ -15,3 +15,4 @@ Papyrus Documentation
    testing
    versions
    stats
+   building_docs
