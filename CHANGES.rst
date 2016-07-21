@@ -4,6 +4,7 @@ Changelog
 2016xxxx
 --------
 
+- Add docs about building papyrus docs
 - Pull ansible docs from STABLE branch [smcmahon]
 - add option to use Chrome, update robotframework versions [polyester]
 
