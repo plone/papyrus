@@ -14,11 +14,11 @@ Building documentation
 Documentation Setup
 ===================
 
-Papyrus follows the *best practrices* of `Plone Documentation <http://docs.plone.org/about/documentation_styleguide.html>`_.
+Papyrus follows the *best practices* of `Plone Documentation <http://docs.plone.org/about/documentation_styleguide.html>`_.
 
 All the docs are written in *rst* [reStructuredText] and inside the */docs* directory.
 
-If you add an document, please *do not forgett* to update the index [index.rst].
+If you add an document, please *do not forget* to update the index [index.rst].
 
 
 Building
