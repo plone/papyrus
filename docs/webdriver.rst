@@ -32,6 +32,6 @@ Currently (status: 2015-10-17) generating screenshots using `phantomjs <http://p
 So for now, it is only optional, and you will have to install phantomjs using your own OS or npm toolchain.
 Run "make screenshots-phantomjs" to use phantomjs.
 
-*NOTE: not all tests/screenshots are fully updated for phantomjs yet.
+.. note:: Not all tests/screenshots are fully updated for phantomjs yet.
 Since execution speed is much faster, we will need to add more conditions like "Wait Until Page Contains  xxx" to ensure stable tests. This affects mainly the 'collaboration' section at the moment (2015-10-17)*
 

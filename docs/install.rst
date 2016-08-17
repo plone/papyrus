@@ -38,27 +38,28 @@ Quick start
 	$ pip install -r requirements.txt
 	$ bin/buildout
 
-2. Build docs [html version, no screenshots]
+2. Build docs [html version, no screen-shots]
 
-   .. code:: bash
+.. code:: bash
 
-      $ make html
+    $ make html
 
-To generate just screenshots, do
+To generate screen-shots, you will have to set up a browser and a webdriver to work with robotframework.
+See docs/webdriver.rst for how to install these for Firefox, Chrome and Phantomjs
+Once you have done that, you can use one of the following commands:
 
-   .. code:: bash
+.. code:: bash
 
-      $ make screenshots
+    $ make screenshots-firefox
+    $ make screenshots-chrome
+    $ make screenshots-phantomjs
 
 To generate the full documentation, do
 
-   .. code:: bash
+.. code:: bash
 
-      $ make full
-
-(this is equivalent to "make clean && make screenshots && make html")
-
-Note that this will also generate robotscreenshots, so you will see Firefox opening multiple times.
+    $ make clean
+    $ make screenshots-$browser (choose one, Chrome gives good results)
+    $ make html
 
 
-When you are not changing robotscreenshots, you can also run "make debug" which will be faster on multi-core machines.
