@@ -4,6 +4,7 @@ Changelog
 2016xxxx
 --------
 
+- pin urllib3 [mauritsvanrees]
 - Switch to pip install zc.buildout
 - Pull ansible docs from STABLE branch [smcmahon]
 - add option to use Chrome, update robotframework versions [polyester]
