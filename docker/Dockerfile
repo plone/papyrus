@@ -27,8 +27,8 @@ RUN builddeps=' \
 EXPOSE 2015
 WORKDIR /srv
 
-ADD dockerfiles/Caddyfile /etc/Caddyfile
-ADD build/html/en /srv/html
+ADD docker/Caddyfile /etc/Caddyfile
+ADD build/html/en /srv/
 
 ENTRYPOINT ["/usr/bin/caddy"]
 CMD ["--conf", "/etc/Caddyfile"]

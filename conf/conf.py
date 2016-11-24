@@ -192,7 +192,7 @@ html_theme_options = {
     'always_show_version_switcher': True,
     'always_show_language_switcher': True,
     'show_version_warning': True,
-    'selected_version': '5',
+    'selected_version': '5.1',
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
