@@ -13,7 +13,6 @@ To install Papyrus with all features and possibilites on Ubuntu 14.04 you will n
     python2.7-dev
     git
     build-essential
-    enchant
     python-virtualenv
     python-dev
     libjpeg-dev
