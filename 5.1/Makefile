@@ -25,7 +25,7 @@ APPLY_PROFILES = plone.app.contenttypes:plone-content
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 
-.PHONY: help fast-link-check clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test dash
+.PHONY: help fast-link-check clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull pullall
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -47,27 +47,14 @@ help:
 	@echo "  changes   to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
-	@echo "  spellcheck   to run the enchant spellchecker on all sourcefiles"
-	@echo "  debug        to run a 'quick' html build without robot-framework"
 	@echo "  clean        to clean build dirs"
-	@echo "  test         to run linkcheck and spellcheck"
 	@echo "  changes      to get an overview what changed"
-	@echo "	 dash	      to create a docset"
-	@echo "  fast-link-check to check links without robot-framework"
 
 pull:
 	-bin/develop update $(PKGNAME)
 
 pullall:
 	-bin/develop update *
-
-externals:
-	@echo
-	@echo "externals is deprecated, they are fetched at buildout time already"
-	@echo "use pullall instead id you want to update"
-	-bin/develop update *
-
-
 
 clean:
 	-rm -rf build/*
@@ -172,18 +159,6 @@ changes:
 	@echo
 	@echo "The overview file is in build/changes."
 
-linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) build/linkcheck
-	@echo
-	@echo "Link check complete; look for any errors in the above output " \
-	      "or in build/linkcheck/output.txt."
-
-fast-link-check:
-	$(SPHINXBUILD) -b linkcheck -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) build/linkcheck
-	@echo
-	@echo "Link check complete; look for any errors in the above output " \
-	    	"or in build/linkcheck/output.txt."
-
 doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) build/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
@@ -194,21 +169,8 @@ epub:
 	@echo
 	@echo "Build finished. The e-Pub pages are in build/epub."
 
-spellcheck:
-	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D sphinxcontrib_robotframework_enabled=0 -D language=$* $(ALLSPHINXOPTS) build/spell/$*
-	@echo
-	@echo "Spellcheck is finished; look for any errors in the above output " \
-              " or in build/spell/output.txt."
-
 debug:
 	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log build/html/en
 	@echo
 	@echo " Running debug build "
 
-dash:
-	$(SPHINXBUILD) -b dash -j 4 $(DASHBUILD) build/dash/
-
-test:	linkcheck spellcheck
-	@echo
-	@echo " link- and spellcheck is finished, for results please " \
-	      " check build/linkcheck/output.txt and build/spell/output.txt"
