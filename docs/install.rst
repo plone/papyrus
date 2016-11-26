@@ -19,46 +19,10 @@ To install Papyrus with all features and possibilites on Ubuntu 14.04 you will n
     libxml2-dev
     libxslt-dev
     libz-dev
-    firefox
     texlive-latex-extra
     texlive-latex-recommended
 
 Quick start
 -----------
-
-1. Clone and bootstrap
-
-.. code:: bash
-
-	$ git clone -b 5.0 https://github.com/plone/papyrus.git
-	$ cd papyrus
-	$ virtualenv --python=python2.7 .
-	$ source bin/activate
-	$ pip install -r requirements.txt
-	$ bin/buildout
-
-2. Build docs [html version, no screen-shots]
-
-.. code:: bash
-
-    $ make html
-
-To generate screen-shots, you will have to set up a browser and a webdriver to work with robotframework.
-See docs/webdriver.rst for how to install these for Firefox, Chrome and Phantomjs
-Once you have done that, you can use one of the following commands:
-
-.. code:: bash
-
-    $ make screenshots-firefox
-    $ make screenshots-chrome
-    $ make screenshots-phantomjs
-
-To generate the full documentation, do
-
-.. code:: bash
-
-    $ make clean
-    $ make screenshots-$browser (choose one, Chrome gives good results)
-    $ make html
 
 
