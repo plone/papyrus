@@ -15,3 +15,4 @@ Papyrus Documentation
    testing
    versions
    stats
+   hosting
