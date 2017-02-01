@@ -84,5 +84,6 @@ Use something like a config.toml, where we do all the configuration:
 .. todo::
 
     Figure out a way to do pinning of version/branches
+    UH looks like we can do that with an array of tables: https://github.com/toml-lang/toml
 
 Next step, would be a script which reads the config.toml, puts it into a script and build the whole stuff.
