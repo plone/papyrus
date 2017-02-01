@@ -7,10 +7,18 @@ What Is Papyrus Meant For
 
 `Papyrus <https://github.com/plone/papyrus/>`_ is meant to be a tool to build our `docs <http://docs.plone.org>`_.
 
+.. todo::
+
+    This should be more generic, I would also be able to use it for the training docs.
+
 Features
 --------
 
 - Building automated documentation for various versions of `Plone <https://plone.org>`_.
+
+.. todo::
+
+     Add training here, too
 
 Current Situation
 =================
@@ -51,3 +59,30 @@ Deploys will be container based with faster releases, if CI tests are green,
 CI will build a container, will test the container and initialize a deploy.
 
 The configuration of papyrus should be easier and also doable by 'less technical people'.
+
+Setup
+=====
+
+I would like to see a solution, where we do not need/use a branch per version.
+If possible we should maintain all versions [docs.plone.org] from one branch.
+
+Configuration
+==============
+
+Use something like a config.toml, where we do all the configuration:
+
+.. code-block:: bash
+
+    [Plone5]
+    version = 5.1
+    # List of repositories we include, one per line
+    repositories = [
+      "https://github.com/plone/Installers-UnifiedInstaller",
+      "https://github.com/plone/plone.app.mosaic"
+    ]
+
+.. todo::
+
+    Figure out a way to do pinning of version/branches
+
+Next step, would be a script which reads the config.toml, puts it into a script and build the whole stuff.
