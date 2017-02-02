@@ -6,6 +6,8 @@ Papyrus Documentation
    :maxdepth: 2
 
    blueprint
+   building
+   template_engines
    install
    add_external_docs
    robots
