@@ -7,6 +7,21 @@ Server
 
 The server is configured and setup via Ansible. All changes are done via Ansible, too, there is no need to login to do anything.
 
+In the long run, weĺl use kubernetes or so, in order to get there we'll take a couple of steps.
+We do that on purpose, otherwise the transision and changes could be too hard to adopt fast.
+
+Step 1
+------
+
+Use a LTS version of Ubuntu, setup and configuration is done via Ansible.
+- has docker
+- has nginx
+
+Step 2
+------
+
+This could be kubernetes, but no worries, we are not there, yet.
+
 Container
 =========
 
@@ -29,3 +44,8 @@ Maybe later to add there are currently not existing or/and out of scope:
 - plone/community
 
 Nginx is currently not running in a container, but 'bare bone' on the host, changes and config are done via Ansible.
+
+Questions
+=========
+
+- do we want zero downtime deployments ?
