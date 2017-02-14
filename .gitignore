@@ -71,4 +71,5 @@ log.html
 output.html
 report.html
 output.xml
-
+*.sublime-project
+*.sublime-workspace
