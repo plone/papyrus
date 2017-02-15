@@ -82,6 +82,15 @@ Once you have done that, you can use one of the following commands:
     $ make screenshots-chrome
     $ make screenshots-phantomjs
 
+.. note::
+
+    As it can be annoying when the browser window is opening all the time while creating the screenshots, on linux you can use xvfb to let the process run in background without actually opening the browser in X.
+    Just run it like follows:
+
+.. code:: bash
+
+    $ xvfb-run --server-args="-screen 0 1920x1200x24" make screenshots-chrome
+
 To generate the full documentation, do
 
 .. code:: bash
