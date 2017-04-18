@@ -1,1 +1,1 @@
-zc.buildout
+zc.buildout==2.4.3
