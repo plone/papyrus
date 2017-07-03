@@ -59,12 +59,12 @@ Quick start
 
 .. code:: bash
 
-	$ git clone -b 5.1 git@github.com:plone/papyrus.git
-	$ cd papyrus
-	$ virtualenv --python=python2.7 .
-	$ source bin/activate
-	$ pip install -r requirements.txt
-	$ bin/buildout
+   git clone -b 5.1 git@github.com:plone/papyrus.git
+   cd papyrus
+   virtualenv --python=python2.7 .
+   source bin/activate
+   pip install -r https://raw.githubusercontent.com/plone/buildout.coredev/5.1/requirements.txt
+   bin/buildout
 
 2. Build docs [html version, no screen-shots]
 

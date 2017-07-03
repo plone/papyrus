@@ -8,6 +8,8 @@ Changelog
 - Adjust name of theme [svx]
 - Adjust buildout to use new theme [svx]
 - Disable freshdesk [svx]
+- Pull 5.1 docs [svx]
+- Update README and docs with new pip install URL [thet/svx]
 
 2016xxxx
 --------
