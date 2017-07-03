@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2017xxx
+-------
+
+- adjusted name of theme [svx]
+
 2016xxxx
 --------
 
