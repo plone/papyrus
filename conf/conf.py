@@ -168,8 +168,8 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
 html_theme = 'plone_org_5'
-import sphinx.themes.plone
-html_theme_path = sphinx.themes.plone.get_html_theme_path()
+import sphinxtheme.plone
+html_theme_path = sphinxtheme.plone.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -193,6 +193,8 @@ html_theme_options = {
     'always_show_language_switcher': True,
     'show_version_warning': True,
     'selected_version': '5',
+    'use_freshdesk': False,
+    'use_gitter': True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
