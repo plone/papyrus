@@ -4,7 +4,9 @@ Changelog
 2017xxx
 -------
 
-- adjusted name of theme [svx]
+- Adjust name of theme [svx]
+- Adjust buildout to use new theme [svx]
+- Disable freshdesk [svx]
 
 2016xxxx
 --------
