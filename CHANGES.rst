@@ -4,6 +4,7 @@ Changelog
 2017xxx
 -------
 
+- Remove dash builder, since we're not using it since a long time [svx]
 - Update versions for Plone 5.1 and remove already defined version specifiers. [thet]
 - Adjust name of theme [svx]
 - Adjust buildout to use new theme [svx]

@@ -52,7 +52,6 @@ help:
 	@echo "  clean        to clean build dirs"
 	@echo "  test         to run linkcheck and spellcheck"
 	@echo "  changes      to get an overview what changed"
-	@echo "	 dash	      to create a docset"
 	@echo "  fast-link-check to check links without robot-framework"
 
 pull:
@@ -66,8 +65,6 @@ externals:
 	@echo "externals is deprecated, they are fetched at buildout time already"
 	@echo "use pullall instead id you want to update"
 	-bin/develop update *
-
-
 
 clean:
 	-rm -rf build/*
@@ -94,7 +91,6 @@ screenshots-chrome:
 	bin/pybot  --variable BROWSER:chrome --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
 	@echo
 	@echo "Screenshot generation finished"
-
 
 gettext:
 	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" -D sphinxcontrib_robotframework_enabled=0 source/$(PKGNAME) source/$(PKGNAME)/_locales
@@ -204,9 +200,6 @@ debug:
 	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log build/html/en
 	@echo
 	@echo " Running debug build "
-
-dash:
-	$(SPHINXBUILD) -b dash -j 4 $(DASHBUILD) build/dash/
 
 test:	linkcheck spellcheck
 	@echo
