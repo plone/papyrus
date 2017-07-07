@@ -10,7 +10,6 @@ Papyrus Documentation
    robots
    phantomjs
    debug
-   dash
    make_release
    testing
    versions
