@@ -25,7 +25,7 @@ APPLY_PROFILES = plone.app.contenttypes:plone-content
 ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
 ROBOTSERVER_OPTS = -v
 
-.PHONY: help fast-link-check clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test dash
+.PHONY: help fast-link-check clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
