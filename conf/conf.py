@@ -36,9 +36,6 @@ sphinx.environment.BuildEnvironment.warn_node = _warn_node
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    #'collective.sphinx.autoatschema',
-    #'collective.sphinx.includedoc'
-    #'sphinxcontrib.contributors',
     'sphinxcontrib_robotframework',
     'sphinx.ext.autosummary',
     'sphinxcontrib.gist',
@@ -97,7 +94,6 @@ trademark_name = "Plone"
 # The versions appearing in the version drop-down. We use 'newest first'
 # You should set the selected_version in the html_theme_options further in the file.
 version = [
-    '5.1',
     '5',
     '4',
     '3',
