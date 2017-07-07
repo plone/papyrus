@@ -226,10 +226,6 @@ html_title = '%(project)s v%(release)s' % {'project': project, 'release': releas
 # using the given strftime format.
 #html_last_updated_fmt = '%b %d, %Y'
 
-# If true, SmartyPants will be used to convert quotes and dashes to
-# typographically correct entities.
-#html_use_smartypants = True
-
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {
 #    '**': ['localtoc.html', 'searchbox.html', 'plone.html', 'contributors.html'],
@@ -293,10 +289,6 @@ latex_logo = "../source/documentation/_static/logo_2x.png"
 
 # If false, no module index is generated.
 #latex_use_modindex = True
-
-# Do not try do funny things on our characters
-# http://sphinx-doc.org/config.html#confval-html_use_smartypants
-html_use_smartypants = False
 
 # Don't build Modules pages
 html_domain_indices = False
