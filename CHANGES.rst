@@ -4,6 +4,7 @@ Changelog
 2017xxx
 -------
 
+- Removed version dropdown. [maurits]
 - Remove unused add-ons out of sphinx conf [svx]
 - More general cleanup [svx]
 - Remove dash builder, since we're not using it since a long time [svx]
