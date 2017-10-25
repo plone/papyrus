@@ -36,7 +36,6 @@ sphinx.environment.BuildEnvironment.warn_node = _warn_node
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinxcontrib_robotframework',
     'sphinx.ext.autosummary',
     'sphinxcontrib.gist',
     'sphinxcontrib.spelling',
@@ -84,7 +83,7 @@ trademark_name = "Plone"
 #
 # The versions appearing in the version drop-down. We use 'newest first'
 # You should set the selected_version in the html_theme_options further in the file.
-#version = 
+version = '5'
 # The full version, including alpha/beta/rc tags.
 release = '5.1'
 
@@ -166,7 +165,7 @@ html_theme_options = {
     'googleanalytics_path': '/',
     'external_topbar': True,
     'version_switcher': True,
-    'always_show_version_switcher': True,
+    'always_show_version_switcher': False,
     'always_show_language_switcher': True,
     'show_version_warning': True,
     'selected_version': '5',
