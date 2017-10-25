@@ -47,15 +47,6 @@ extensions = [
 spelling_word_list_filename= 'spelling_wordlist.txt'
 spelling_ignore_pypi_package_names=True
 
-# Enable Robot Framework tests during Sphinx compilation:
-sphinxcontrib_robotframework_enabled = True  # 'True' is the default
-sphinxcontrib_robotframework_quiet = True  # 'False' is the default
-
-# Configure Robot Frameowrk tests to use Firefox
-sphinxcontrib_robotframework_variables = {
-#    "BROWSER": "phantomjs"
-    "BROWSER": "Firefox"  # 'Firefox' is the default
-}
 # Options for the linkcheck builder
 # Ignore localhost
 linkcheck_ignore = [r'http://localhost:\d+/',r'http://localhost:8080', r'http://127.0.0.1:8080', r'http://127.0.0.1' ]
@@ -93,11 +84,7 @@ trademark_name = "Plone"
 #
 # The versions appearing in the version drop-down. We use 'newest first'
 # You should set the selected_version in the html_theme_options further in the file.
-version = [
-    '5',
-    '4',
-    '3',
-]
+#version = 
 # The full version, including alpha/beta/rc tags.
 release = '5.1'
 
