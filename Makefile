@@ -30,9 +30,6 @@ ROBOTSERVER_OPTS = -v
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html      to make standalone HTML files without screenshots"
-	@echo "  screenshots-firefox  	to generate the screenshots using robotframework and the Firefox browser"
-	@echo "  screenshots-chrome  	to generate the screenshots using robotframework and the Chrome browser"
-	@echo "  screenshots-phantomjs	to generate the screenshots using robotframework and the phantomjs browser, which needs to be available on your path"
 	@echo "  pullall    to refresh and update all external repositories"
 	@echo "  dirhtml   to make HTML files named index.html in directories"
 	@echo "  pickle    to make pickle files"
@@ -63,7 +60,7 @@ pullall:
 externals:
 	@echo
 	@echo "externals is deprecated, they are fetched at buildout time already"
-	@echo "use pullall instead id you want to update"
+	@echo "use pullall instead if you want to update"
 	-bin/develop update *
 
 clean:
@@ -73,24 +70,9 @@ clean:
 html: $(foreach lang,$(LANGS),html-$(lang))
 
 html-%: $(SPHINX_DEPENDENCIES)
-	LANGUAGE=$* $(SPHINXBUILD) -b html -w log/sphinx-build.log -D language=$* -D sphinxcontrib_robotframework_enabled=0 $(ALLSPHINXOPTS) build/html/$*
+	LANGUAGE=$* $(SPHINXBUILD) -b html -w log/sphinx-build.log -D language=$*  $(ALLSPHINXOPTS) build/html/$*
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
-
-screenshots-firefox:
-	bin/pybot --variable BROWSER:firefox --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
-	@echo
-	@echo "Screenshot generation finished"
-
-screenshots-phantomjs:
-	bin/pybot  --variable BROWSER:phantomjs --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
-	@echo
-	@echo "Screenshot generation finished"
-
-screenshots-chrome:
-	bin/pybot  --variable BROWSER:chrome --exclude wip-* --listener plone.app.robotframework.server.LazyStop source
-	@echo
-	@echo "Screenshot generation finished"
 
 gettext:
 	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" -D sphinxcontrib_robotframework_enabled=0 source/$(PKGNAME) source/$(PKGNAME)/_locales
@@ -106,11 +88,6 @@ robot-pot: babel
 
 serve:
 	CONFIGURE_PACKAGES=$(CONFIGURE_PACKAGES) APPLY_PROFILES=$(APPLY_PROFILES) bin/robot-server $(ROBOTSERVER_FIXTURE) $(ROBOTSERVER_OPTS)
-
-robot:
-	LANGUAGE=en bin/robot-sphinx -b html -D language=en $(ALLSPHINXOPTS) build/html/en
-	@echo
-	@echo "Build finished. The HTML pages are in build/html."
 
 babel:
 	bin/pybabel extract source/$(PKGNAME) -o source/$(PKGNAME)/_locales/pot/plone.pot
