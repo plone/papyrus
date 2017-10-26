@@ -171,6 +171,8 @@ html_theme_options = {
     'selected_version': '5',
     'use_freshdesk': False,
     'use_gitter': True,
+# syntax matters here: strings in single quotes, comma, space, next string
+    'version_drop': ['unreleased', '5', '4', '3',],
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
