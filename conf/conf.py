@@ -36,7 +36,6 @@ sphinx.environment.BuildEnvironment.warn_node = _warn_node
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinxcontrib_robotframework',
     'sphinx.ext.autosummary',
     'sphinxcontrib.gist',
     'sphinxcontrib.spelling',
@@ -47,15 +46,6 @@ extensions = [
 spelling_word_list_filename= 'spelling_wordlist.txt'
 spelling_ignore_pypi_package_names=True
 
-# Enable Robot Framework tests during Sphinx compilation:
-sphinxcontrib_robotframework_enabled = True  # 'True' is the default
-sphinxcontrib_robotframework_quiet = True  # 'False' is the default
-
-# Configure Robot Frameowrk tests to use Firefox
-sphinxcontrib_robotframework_variables = {
-#    "BROWSER": "phantomjs"
-    "BROWSER": "Firefox"  # 'Firefox' is the default
-}
 # Options for the linkcheck builder
 # Ignore localhost
 linkcheck_ignore = [r'http://localhost:\d+/',r'http://localhost:8080', r'http://127.0.0.1:8080', r'http://127.0.0.1' ]
@@ -93,11 +83,7 @@ trademark_name = "Plone"
 #
 # The versions appearing in the version drop-down. We use 'newest first'
 # You should set the selected_version in the html_theme_options further in the file.
-version = [
-    '5',
-    '4',
-    '3',
-]
+version = '5'
 # The full version, including alpha/beta/rc tags.
 release = '5.1'
 
@@ -179,12 +165,14 @@ html_theme_options = {
     'googleanalytics_path': '/',
     'external_topbar': True,
     'version_switcher': True,
-    'always_show_version_switcher': True,
+    'always_show_version_switcher': False,
     'always_show_language_switcher': True,
     'show_version_warning': True,
     'selected_version': '5',
     'use_freshdesk': False,
     'use_gitter': True,
+# syntax matters here: strings in single quotes, comma, space, next string
+    'version_drop': ['unreleased', '5', '4', '3',],
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

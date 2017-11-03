@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2017xxx
--------
+20171103
+--------
 
 - Remove unused add-ons out of sphinx conf [svx]
 - More general cleanup [svx]
@@ -13,6 +13,8 @@ Changelog
 - Disable freshdesk [svx]
 - Pull 5.1 docs [svx]
 - Update README and docs with new pip install URL [thet/svx]
+- Remove old and not needed configs [svx]
+- Improve Sphinx config [polyester]
 
 2016xxxx
 --------
