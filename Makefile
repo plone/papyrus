@@ -19,12 +19,6 @@ ALLSPHINXOPTS   = -d build/doctrees -c conf $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) s
 DASHBUILD	= -d build/doctrees -c dash $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source/$(PKGNAME)
 I18NOPTS        = --pot-dir source/$(PKGNAME)/_locales -c conf
 
-# Robot-server variables
-CONFIGURE_PACKAGES = plone.app.contenttypes
-APPLY_PROFILES = plone.app.contenttypes:plone-content
-ROBOTSERVER_FIXTURE = plone.app.robotframework.PLONE_ROBOT_TESTING
-ROBOTSERVER_OPTS = -v
-
 .PHONY: help fast-link-check clean html serve robot babel dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest pull spellcheck test
 
 help:
@@ -75,7 +69,7 @@ html-%: $(SPHINX_DEPENDENCIES)
 	@echo "Build finished. The HTML pages are in build/html."
 
 gettext:
-	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" -D sphinxcontrib_robotframework_enabled=0 source/$(PKGNAME) source/$(PKGNAME)/_locales
+	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" source/$(PKGNAME) source/$(PKGNAME)/_locales
 	@echo
 	@echo "Build finished. The HTML pages are in build/gettext."
 
@@ -85,9 +79,6 @@ transifex-init-%:
 	$(SPHINXINTLBUILD) update $(I18NOPTS) -l $*
 
 robot-pot: babel
-
-serve:
-	CONFIGURE_PACKAGES=$(CONFIGURE_PACKAGES) APPLY_PROFILES=$(APPLY_PROFILES) bin/robot-server $(ROBOTSERVER_FIXTURE) $(ROBOTSERVER_OPTS)
 
 babel:
 	bin/pybabel extract source/$(PKGNAME) -o source/$(PKGNAME)/_locales/pot/plone.pot
@@ -152,7 +143,7 @@ linkcheck:
 	      "or in build/linkcheck/output.txt."
 
 fast-link-check:
-	$(SPHINXBUILD) -b linkcheck -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) build/linkcheck
+	$(SPHINXBUILD) -b linkcheck -j 4 $(ALLSPHINXOPTS) build/linkcheck
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	    	"or in build/linkcheck/output.txt."
@@ -168,13 +159,13 @@ epub:
 	@echo "Build finished. The e-Pub pages are in build/epub."
 
 spellcheck:
-	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D sphinxcontrib_robotframework_enabled=0 -D language=$* $(ALLSPHINXOPTS) build/spell/$*
+	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D language=$* $(ALLSPHINXOPTS) build/spell/$*
 	@echo
 	@echo "Spellcheck is finished; look for any errors in the above output " \
               " or in build/spell/output.txt."
 
 debug:
-	$(SPHINXBUILD) -b html -D sphinxcontrib_robotframework_enabled=0 -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log build/html/en
+	$(SPHINXBUILD) -b html -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log build/html/en
 	@echo
 	@echo " Running debug build "
 
