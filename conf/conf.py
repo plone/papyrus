@@ -36,6 +36,9 @@ sphinx.environment.BuildEnvironment.warn_node = _warn_node
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
+    'sphinx.ext.doctest',
+    'sphinx.ext.coverage',
+    'sphinx.ext.viewcode',
     'sphinx.ext.autosummary',
     'sphinxcontrib.gist',
     'sphinxcontrib.spelling',

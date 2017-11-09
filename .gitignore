@@ -37,7 +37,7 @@
 .svn
 __minitage__*
 bin/
-build/
+_build/
 buildout-cache/downloads/*
 buildout-cache/eggs/*
 checkouts/

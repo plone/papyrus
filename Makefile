@@ -64,9 +64,9 @@ clean:
 html: $(foreach lang,$(LANGS),html-$(lang))
 
 html-%: $(SPHINX_DEPENDENCIES)
-	LANGUAGE=$* $(SPHINXBUILD) -b html -w log/sphinx-build.log -D language=$*  $(ALLSPHINXOPTS) build/html/$*
+	LANGUAGE=$* $(SPHINXBUILD) -b html -w log/sphinx-build.log -D language=$*  $(ALLSPHINXOPTS) _build/html/$*
 	@echo
-	@echo "Build finished. The HTML pages are in build/html."
+	@echo "Build finished. The HTML pages are in _build/html."
 
 gettext:
 	$(SPHINXBUILD) -b gettext -c conf -D copyright="The Plone Foundation" source/$(PKGNAME) source/$(PKGNAME)/_locales
@@ -90,33 +90,33 @@ transifex-push:
 transifex-pull: $(foreach lang,$(LANGS),transifex-pull-$(lang))
 transifex-pull-%:
 	$(TX) pull -l $*
-	$(SPHINXINTLBUILD) $(I18NOPTS) -l $* build
+	$(SPHINXINTLBUILD) $(I18NOPTS) -l $* _build
 	@echo
-	@echo "Build finished. The HTML pages are in build/html."
+	@echo "Build finished. The HTML pages are in _build/html."
 
 dirhtml:
-	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) build/dirhtml
+	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) _build/dirhtml
 	@echo
-	@echo "Build finished. The HTML pages are in build/dirhtml."
+	@echo "Build finished. The HTML pages are in _build/dirhtml."
 
 pickle:
-	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) build/pickle
+	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) _build/pickle
 	@echo
 	@echo "Build finished; now you can process the pickle files."
 
 json:
-	$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) build/json
+	$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) _build/json
 	@echo
 	@echo "Build finished; now you can process the JSON files."
 
 htmlhelp:
-	$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) build/htmlhelp
+	$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) _build/htmlhelp
 	@echo
 	@echo "Build finished; now you can run HTML Help Workshop with the" \
 	      ".hhp project file in build/htmlhelp."
 
 qthelp:
-	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) build/qthelp
+	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) _build/qthelp
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in build/qthelp, like this:"
@@ -125,47 +125,47 @@ qthelp:
 	@echo "# assistant -collectionFile build/qthelp/PloneDeveloperManual.qhc"
 
 latex:
-	$(SPHINXBUILD) -w log/sphinx-latex.log -b latex $(ALLSPHINXOPTS)  build/latex
+	$(SPHINXBUILD) -w log/sphinx-latex.log -b latex $(ALLSPHINXOPTS)  _build/latex
 	@echo
-	@echo "Build finished; the LaTeX files are in build/latex."
+	@echo "Build finished; the LaTeX files are in _build/latex."
 	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
 	      "run these through (pdf)latex."
 
 changes:
-	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) build/changes
+	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) _build/changes
 	@echo
-	@echo "The overview file is in build/changes."
+	@echo "The overview file is in _build/changes."
 
 linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) build/linkcheck
+	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) _build/linkcheck
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
-	      "or in build/linkcheck/output.txt."
+	      "or in _build/linkcheck/output.txt."
 
 fast-link-check:
-	$(SPHINXBUILD) -b linkcheck -j 4 $(ALLSPHINXOPTS) build/linkcheck
+	$(SPHINXBUILD) -b linkcheck -j 4 $(ALLSPHINXOPTS) _build/linkcheck
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
-	    	"or in build/linkcheck/output.txt."
+	    	"or in _build/linkcheck/output.txt."
 
 doctest:
-	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) build/doctest
+	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) _build/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
-	      "results in build/doctest/output.txt."
+	      "results in _build/doctest/output.txt."
 
 epub:
-	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) build/epub
+	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) _build/epub
 	@echo
-	@echo "Build finished. The e-Pub pages are in build/epub."
+	@echo "Build finished. The e-Pub pages are in _build/epub."
 
 spellcheck:
-	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D language=$* $(ALLSPHINXOPTS) build/spell/$*
+	LANGUAGE=$* $(SPHINXBUILD) -b spelling -D language=$* $(ALLSPHINXOPTS) _build/spell/$*
 	@echo
 	@echo "Spellcheck is finished; look for any errors in the above output " \
-              " or in build/spell/output.txt."
+              " or in _build/spell/output.txt."
 
 debug:
-	$(SPHINXBUILD) -b html -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log build/html/en
+	$(SPHINXBUILD) -b html -j 4 $(ALLSPHINXOPTS) -w log/sphinx-debug.log _build/html/en
 	@echo
 	@echo " Running debug build "
 
