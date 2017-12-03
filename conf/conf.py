@@ -174,6 +174,7 @@ html_theme_options = {
     'selected_version': '5',
     'use_freshdesk': False,
     'use_gitter': True,
+    'contributing_link': 'https://docs.plone.org/about/contributing/index.html',
 # syntax matters here: strings in single quotes, comma, space, next string
     'version_drop': ['unreleased', '5', '4', '3',],
 }

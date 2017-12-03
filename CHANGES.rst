@@ -1,6 +1,11 @@
 Changelog
 =========
 
+20171203
+--------
+
+- Add link to contribute button in con.py [svx]
+
 20171103
 --------
 
