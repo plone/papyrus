@@ -1,6 +1,12 @@
 Changelog
 =========
 
+20180401
+--------
+
+- Update Sphinx to 1.7.2 [svx]
+- Adjust Makefile to use `-j auto`
+
 20171203
 --------
 
