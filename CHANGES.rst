@@ -1,6 +1,11 @@
 Changelog
 =========
 
+20181002
+--------
+
+- update instructions to work on Ubuntu 18.04
+
 20180401
 --------
 
