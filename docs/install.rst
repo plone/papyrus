@@ -46,7 +46,7 @@ Quick Start
 
       $ cd source/documentation
       $ git clone https://github.com/plone/documentation-roboshots.git
-      $ mv documentation/roboshots/* _robot/
+      $ mv documentation-roboshots/* _robot/
 
 
 To generate the full documentation, do
