@@ -1,6 +1,12 @@
 Changelog
 =========
 
+20190721
+--------
+
+- update instructions for python 3 and plone 5.2
+
+
 20181002
 --------
 

@@ -35,6 +35,7 @@
 .secret.cfg
 .settings
 .svn
+.vscode*
 __minitage__*
 bin/
 _build/
@@ -73,3 +74,4 @@ report.html
 output.xml
 share/
 build/
+.
