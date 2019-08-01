@@ -18,7 +18,7 @@ In order to have this work correctly it is important that you follow the `best p
 
 To accomplish pulling in those docs, and **only** those docs, we have to declare them in ``checkouts-documentation.cfg``:
 
-https://github.com/plone/papyrus/blob/5.0/checkouts-documentation.cfg
+https://github.com/plone/papyrus/blob/5.2/checkouts-documentation.cfg
 
 The version of external documentation should match the release that the main documentation targets.
 

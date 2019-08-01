@@ -10,10 +10,9 @@ This is done via the branches for the different versions.
 
 	Plone 3: https://github.com/plone/documentation/tree/3.3
 	Plone 4: https://github.com/plone/documentation/tree/4.3
-	Plone 5: https://github.com/plone/documentation/tree/5.0
+	Plone 5: https://github.com/plone/documentation/tree/5.2
 
-The "default" branch on github is Plone 5, as of 19 sept 2015, although the website on docs.plone.org still has Plone 4 as the default.
-That will change when Plone 5 is released.
+The "default" branch on github is Plone 5, as of 19 sept 2015.
 
 **Papyrus:**
 
@@ -21,7 +20,7 @@ That will change when Plone 5 is released.
 
 	Plone 3: https://github.com/plone/papyrus/tree/3.3
 	Plone 4: https://github.com/plone/papyrus/tree/4.3
-	Plone 5: https://github.com/plone/papyrus/tree/5.0
+	Plone 5: https://github.com/plone/papyrus/tree/5.2
 
 
 For building docs, for Plone 3, for example you do a checkout of papyrus, switch to the 3.3 branch and start the building.
@@ -37,4 +36,4 @@ Definition of the branch of the plone version, for papyrus versions 3.3 and 4.4 
 
 This tells buildout to checkout the branch 3.3, which is Plone 3.3
 
-For papyrus 5.0, we switched to a new method of defining sources, there you can find the branch definition in the file checkouts-documentation.cfg
+For papyrus 5.x, we switched to a new method of defining sources, there you can find the branch definition in the file checkouts-documentation.cfg
