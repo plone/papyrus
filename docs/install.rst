@@ -26,6 +26,9 @@ To install Papyrus with all features and possibilites on Ubuntu 19.04 you will n
     texlive-latex-extra
     texlive-latex-recommended
 
+If you only want to create html docs, you can leave out the texlive-latex-extra and texlive-latex-recommend packages, which take up a large amount of diskspace and are only needed for PDF generation.
+
+
 Quick Start
 ===========
 
