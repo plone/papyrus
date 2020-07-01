@@ -7,12 +7,12 @@ Requirements
 
 Since Papyrus uses robot-framework for fully automated screenshots, the buildout will install Plone.
 Also, to generate PDF, you'll need latex, which is a large package.
-To install Papyrus with all features and possibilites on Ubuntu 19.04 you will need:
+To install Papyrus with all features and possibilites on Ubuntu 20.04 you will need:
 
 .. code-block:: bash
 
-    python3.7
-    python3.7-dev
+    python3.8
+    python3.8-dev
     git
     build-essential
     enchant
@@ -38,9 +38,18 @@ Quick Start
 
    git clone -b 5.2 https://github.com/plone/papyrus.git
    cd papyrus
-   virtualenv --python=python3.7 .
+   virtualenv --python=python3.8 .
    source bin/activate
    pip install -r https://raw.githubusercontent.com/plone/buildout.coredev/5.2/requirements.txt
+   bin/buildout
+
+If buildout gets stuck in a loop installing setuptools and restarting,
+a workaround is to halt the process hand-install certain versions:
+
+.. code:: bash
+  
+   pip install zc.buildout==2.13.2
+   pip install setuptools==42.0.2
    bin/buildout
 
 2. Download the latest known good screenshots
