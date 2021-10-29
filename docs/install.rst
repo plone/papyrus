@@ -7,7 +7,7 @@ Requirements
 
 Since Papyrus uses robot-framework for fully automated screenshots, the buildout will install Plone.
 Also, to generate PDF, you'll need latex, which is a large package.
-To install Papyrus with all features and possibilites on Ubuntu 20.04 you will need:
+To install Papyrus with all features and possibilities on Ubuntu 20.04 you will need:
 
 .. code-block:: bash
 
@@ -26,8 +26,15 @@ To install Papyrus with all features and possibilites on Ubuntu 20.04 you will n
     texlive-latex-extra
     texlive-latex-recommended
 
-If you only want to create html docs, you can leave out the texlive-latex-extra and texlive-latex-recommend packages, which take up a large amount of diskspace and are only needed for PDF generation.
+If you only want to create html docs, you can leave out the texlive-latex-extra and texlive-latex-recommended packages, which take up a large amount of diskspace and are only needed for PDF generation.
 
+Note: on later versions, the package might be different.
+Tested: Ubuntu 21.04
+
+There the changed packages are:
+python 3.9
+python 3.9-dev
+python3-enchant
 
 Quick Start
 ===========
@@ -47,7 +54,7 @@ If buildout gets stuck in a loop installing setuptools and restarting,
 a workaround is to halt the process hand-install certain versions:
 
 .. code:: bash
-  
+
    pip install zc.buildout==2.13.2
    pip install setuptools==42.0.2
    bin/buildout

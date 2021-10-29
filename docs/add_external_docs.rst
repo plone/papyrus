@@ -1,7 +1,7 @@
 How to add external docs
 ========================
 
-Not all of the documentation of docs.plone.org is located on https://github.com/plone/documentation, some of them we fetch directly from the repository of the add-on.
+Not all the documentation of docs.plone.org is located on https://github.com/plone/documentation, some of them we fetch directly from the repository of the add-on.
 
 .. note::
 
@@ -31,4 +31,4 @@ In any case you must add information about the new external docs to section ``[a
 Note that this doesn't affect the actual **placement** of those docs into the tree; you'll have to refer to it at the wanted location, usually with a TOC command.
 See the mindmap for ideas, and consult with the team first when in doubt where this add-on documentation should go.
 
-If the external docs are placed into the documentation anywhere **outside** the 'external' subdir, you must also add this location to the source/documentation/.gitignore file!
+If the external docs are placed into the documentation anywhere **outside** the 'external' subdirectory, you must also add this location to the source/documentation/.gitignore file!

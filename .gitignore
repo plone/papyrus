@@ -74,4 +74,4 @@ report.html
 output.xml
 share/
 build/
-.
+pyvenv.cfg
