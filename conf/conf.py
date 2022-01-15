@@ -180,7 +180,7 @@ html_theme_options = {
     "version_switcher": True,
     "always_show_version_switcher": False,
     "always_show_language_switcher": True,
-    "show_version_warning": True,
+    "show_version_warning": False,
     "selected_version": "5",
     "use_freshdesk": False,
     "use_gitter": True,
