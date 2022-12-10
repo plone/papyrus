@@ -4,7 +4,7 @@ Papyrus - the Plone user manual buildout
 This repository is a work in progress to create up-to-date user manual for
 Plone with fully automated screen-shots.
 
-You can view the result on http://docs.plone.org
+You can view the result on http://5.docs.plone.org
 
 .. contents:: :local:
 

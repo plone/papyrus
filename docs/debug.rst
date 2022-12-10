@@ -7,7 +7,7 @@ you want to make sure they look OK in HTML.
 For small changes where you just want to see that the formatting went well, it
 can be enough to use for example `OmniMarkupPreviewer <https://sublime.wbond.net/packages/OmniMarkupPreviewer>`_ this Sublime addon will create html from your rst code.
 
-However for larger changes you really want to check how it will look like on `docs.plone.org <http://docs.plone.org>`_.
+However for larger changes you really want to check how it will look like on `5.docs.plone.org <http://5.docs.plone.org>`_.
 
 If you 'just' worked on text, you do not want to generate all the screenshots
 with robot-framework, because this will take a long time.

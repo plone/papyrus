@@ -1,11 +1,11 @@
 How to add external docs
 ========================
 
-Not all the documentation of docs.plone.org is located on https://github.com/plone/documentation, some of them we fetch directly from the repository of the add-on.
+Not all the documentation of 5.docs.plone.org is located on https://github.com/plone/documentation/tree/5.2, some of them we fetch directly from the repository of the add-on.
 
 .. note::
 
-    The docs in the https://github.com/plone/documentation should have a complete documentation of Plone.
+    The docs in the https://github.com/plone/documentation/tree/5.2 should have a complete documentation of Plone 5.x.
     However, we want to include the documentation for frequently used add-ons as well.
     This has a dual goal: it makes it easier for the audiences to work with Plone, and it will hopefully encourage the add-on author to document their add-ons better.
 
@@ -14,7 +14,7 @@ How it works
 
 We use a git command called `git sparse <http://git-scm.com/docs/git-checkout>`_
 
-In order to have this work correctly it is important that you follow the `best practice guidelines <http://docs.plone.org/about/documentation_styleguide_addons.html>`_ and place all you documentation of your Add-on into the folder **docs**.
+In order to have this work correctly it is important that you follow the `best practice guidelines <http://5.docs.plone.org/about/documentation_styleguide_addons.html>`_ and place all you documentation of your Add-on into the folder **docs**.
 
 To accomplish pulling in those docs, and **only** those docs, we have to declare them in ``checkouts-documentation.cfg``:
 

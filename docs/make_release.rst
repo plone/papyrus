@@ -30,5 +30,5 @@ Steps
 - write changelog
 - write down nr of typos and not working links
 - new pull request for dash user-contributions
-- sync new docsets and html to docs.plone.org
+- sync new docsets and html to 5.docs.plone.org
 - announce new version via twitter account and on community
