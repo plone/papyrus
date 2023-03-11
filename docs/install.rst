@@ -47,9 +47,12 @@ a workaround is to halt the process hand-install certain versions:
 
 .. code:: bash
 
-   pip install zc.buildout==2.13.2
-   pip install setuptools==42.0.2
+   pip install zc.buildout==65.7.0
+   pip install setuptools==3.0.1
    bin/buildout
+   
+NOTE: when building on Python 3.10, there is an issue where buildout can't download Zope==4.8.7 as the metadata for the wheel says Python < 3.9. 
+Current workaround/hack is to download the wheel file, change that metadata, pip install the wheel locally
 
 2. Download the latest known good screenshots
 
