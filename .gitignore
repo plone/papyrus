@@ -75,3 +75,5 @@ output.xml
 share/
 build/
 pyvenv.cfg
+Pipfile
+Pipfile.lock
